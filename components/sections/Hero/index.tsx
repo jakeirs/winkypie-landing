@@ -1,6 +1,30 @@
+'use client'
+
+import { useRef, useEffect } from 'react'
+
 import Button from '@/components/ui/Button/Button'
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const handleTimeUpdate = () => {
+      if (video.currentTime >= 44) {
+        video.playbackRate = 0.5
+      } else if (video.currentTime >= 14) {
+        video.playbackRate = 4
+      } else {
+        video.playbackRate = 2
+      }
+    }
+
+    video.addEventListener('timeupdate', handleTimeUpdate)
+    return () => video.removeEventListener('timeupdate', handleTimeUpdate)
+  }, [])
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-b from-primary/5 via-transparent to-transparent" />
@@ -53,6 +77,7 @@ export function Hero() {
             <div className="phone-mockup">
               <div className="phone-screen w-55 h-110 sm:w-70 sm:h-140 relative">
                 <video
+                  ref={videoRef}
                   src="/video.mp4"
                   autoPlay
                   muted
