@@ -75,6 +75,10 @@ export function Hero() {
 
           <div className="relative flex justify-center animate-fade-in">
             <div className="phone-mockup">
+              <div className="phone-button-right" style={{ top: '8rem', height: '3rem' }} />
+              <div className="phone-button-left" style={{ top: '5.5rem', height: '1.5rem' }} />
+              <div className="phone-button-left" style={{ top: '8rem', height: '2.5rem' }} />
+              <div className="phone-button-left" style={{ top: '11rem', height: '2.5rem' }} />
               <div className="phone-screen w-55 h-110 sm:w-70 sm:h-140 relative">
                 <video
                   ref={videoRef}
@@ -83,7 +87,7 @@ export function Hero() {
                   muted
                   loop
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
             </div>
