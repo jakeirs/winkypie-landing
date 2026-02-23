@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from 'next/font/google'
 
 import CookieBanner from '@/components/ui/CookieBanner/CookieBanner'
 import GoogleAnalytics from '@/components/ui/GoogleAnalytics/GoogleAnalytics'
+import MetaPixel from '@/components/ui/MetaPixel/MetaPixel'
 
 import './globals.css'
 
@@ -46,6 +47,7 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
+        <MetaPixel pixelId="1045571365299146" />
         <CookieBanner />
       </body>
     </html>
