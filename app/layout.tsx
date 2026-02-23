@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
+import CookieBanner from '@/components/ui/CookieBanner/CookieBanner'
+import GoogleAnalytics from '@/components/ui/GoogleAnalytics/GoogleAnalytics'
+
 import './globals.css'
 
 const geistSans = Geist({
@@ -40,6 +43,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
+        <CookieBanner />
       </body>
     </html>
   )
