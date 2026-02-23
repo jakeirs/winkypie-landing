@@ -5,10 +5,18 @@ const galleryRow1 = [
   '/poses/m-cat-1__car-interior_casual-selfie_confident-smirk_natural-sunlight_high-contrast.jpg',
   '/poses/cat-2__coffee_eyes-closed_face-to-sun_outdoor.jpg',
   '/poses/cat-3__hand-in-pocket_outdoor_black-door_eye-contact_confident.jpg',
-  '/poses/m-cat-1__bedroom_mirror-selfie_confident_window-light_messy-bed.jpg',
+  '/poses/m-cat-2__urban-balcony_seated-leg-cross_cheerful-and-spontaneous_cream-corduroy-jacket_diffused-natural-light.jpg',
   '/poses/cat-4__boat_outdoor_sunny-white-top-direct-gaze.jpg',
   '/poses/cat-5__sitting_eye-contact_business_mid-shot.jpg',
+  '/poses/m-cat-3__urban-street_over-the-shoulder_golden-hour_walking-away.jpg',
   '/poses/cat-1__sunglasses_outside.jpg',
+  '/poses/cat-2__indirect-gaze_hand-on-chin_crossed-legs.jpg',
+  '/poses/m-cat-4__mediterranean-alleyway_casual-stroll-lean_high-contrast-sunlight_unbuttoned-shirt_vacation-mood.jpg',
+  '/poses/cat-3__leaning-on-wall_outdoor_urban_indirect-gaze_confident_hand-in-hair.jpg',
+  '/poses/cat-4__turtle-neck_hand-to-chin_elegant_indoor_indirect-gaze.jpg',
+  '/poses/m-cat-5__studio-portrait_arms-crossed-pose_rim-lighting_confident-smile_corporate-blazer.jpg',
+  '/poses/cat-1__direct-gaze_indoor_fresh-look.jpg',
+  '/poses/m-cat-2__minimalist-studio_seated-contrapposto_sophisticated-masculine_high-contrast-monochrome_turtleneck-and-boots.jpg',
 ]
 
 const galleryRow2 = [
@@ -16,10 +24,18 @@ const galleryRow2 = [
   '/poses/m-cat-1__car-interior_head-tilt-selfie_relaxed-smirk_athletic-jersey_natural-daylight.jpg',
   '/poses/cat-3__looking-back_over-the-shoulder_outdoor_eye-contact.jpg',
   '/poses/cat-4__dreamy_golden-hour_over-the-shoulder_looking-back_outdoor_park.jpg',
-  '/poses/m-cat-1__domestic-interior_low-angle-portrait_hand-behind-head_warm-overhead-lighting_contemplative-mood.jpg',
+  '/poses/m-cat-3__modern-architecture_wall-lean_relaxed-mood_bright-daylight_full-body-shot.jpg',
   '/poses/cat-5__walk_sunshine_glasses_full-body-shot.jpg',
   '/poses/cat-1__gym_headphones_side-shot.jpg',
+  '/poses/m-cat-4__nighttime-balcony_leaning-candid_joyful-expression_cityscape-background_artificial-urban-lighting.jpg',
   '/poses/cat-2__direct-gaze_hand-in-hair_outdoor.jpg',
+  '/poses/cat-1__hand-behind_golden-hours_outside_urban.jpg',
+  '/poses/m-cat-5__minimalist-interior_casual-suit-lean_professional-mood_diffused-natural-light.jpg',
+  '/poses/cat-3__squat_confident_eye-contact_outdoor_fashion.jpg',
+  '/poses/cat-4__eye-contact_over-the-shoulder_outdoor_sunny.jpg',
+  '/poses/m-cat-2__outdoor-park_seated-side-profile_golden-hour-glow_silver-wristwatch_cheerful-mood.jpg',
+  '/poses/cat-2__sitting-on-couch_eye-contact_leaning-back_hand-in-hair_indoor.jpg',
+  '/poses/m-cat-1__minimalist-interior_mirror-selfie-lean_relaxed-and-confident_hand-in-pocket_soft-indoor-lighting.jpg',
 ]
 
 const miniPoses = [
