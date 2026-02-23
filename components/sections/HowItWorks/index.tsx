@@ -2,34 +2,28 @@ import Image from 'next/image'
 
 const steps = [
   {
-    number: '1',
+    number: '01',
     title: 'Upload your selfie',
     description: 'Take a quick selfie or choose from your gallery. One photo is all you need.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
-      </svg>
-    ),
+    image: '/sample.jpg',
+    imageAlt: 'Upload selfie step',
+    tilt: '-rotate-3',
   },
   {
-    number: '2',
+    number: '02',
     title: 'Pick a pose',
     description: 'Browse 100+ professional poses and select the one that fits your vibe.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
+    image: '/poses/cat-2__outdoor_knee-up_subtle-smile_day_eye-contact.jpg',
+    imageAlt: 'Pick a pose step',
+    tilt: 'rotate-0',
   },
   {
-    number: '3',
-    title: 'Generate magic',
+    number: '03',
+    title: 'Get your photo',
     description: 'Hit generate and watch AI create your professional photo in seconds.',
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
+    image: '/poses/cat-4__eye-contact_park_outdoor_eye-contact.jpg',
+    imageAlt: 'Generated result step',
+    tilt: 'rotate-3',
   },
 ]
 
@@ -46,42 +40,41 @@ export function HowItWorks() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-10">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
-              <div className="text-center">
-                <div className="relative inline-block mb-6">
-                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
-                    {step.icon}
-                  </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-background border-2 border-primary flex items-center justify-center text-sm font-bold text-primary">
-                    {step.number}
+            <div key={index} className="relative flex flex-col items-center">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-5xl lg:text-6xl font-bold gradient-text leading-none">
+                  {step.number}
+                </span>
+              </div>
+
+              <h3 className="text-xl lg:text-2xl font-semibold mb-2 text-center">{step.title}</h3>
+              <p className="text-muted text-center text-sm lg:text-base mb-8 max-w-70">{step.description}</p>
+
+              <div className={`${step.tilt} transition-transform duration-500 hover:rotate-0`}>
+                <div className="phone-mockup">
+                  <div className="phone-screen w-50 h-100 sm:w-55 sm:h-110 relative">
+                    <Image
+                      src={step.image}
+                      alt={step.imageAlt}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted">{step.description}</p>
               </div>
 
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-[2px]">
-                  <div className="w-full h-full bg-gradient-to-r from-primary/50 to-transparent" />
+                <div className="hidden md:flex absolute top-13 left-[65%] w-[70%] items-center">
+                  <div className="w-full h-0.5 bg-linear-to-r from-primary/60 to-secondary/60" />
+                  <svg className="w-4 h-4 -ml-1 text-secondary/60 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z" />
+                  </svg>
                 </div>
               )}
             </div>
           ))}
-        </div>
-
-        <div className="mt-16 flex justify-center">
-          <div className="phone-mockup">
-            <div className="phone-screen w-[260px] h-[520px] relative">
-              <Image
-                src="/sample.jpg"
-                alt="WinkyPie App Demo"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>
