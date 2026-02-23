@@ -510,7 +510,7 @@ export default function TermsPage() {
           <ul>
             <li>Discontinuing use of the AI image generation features</li>
             <li>Deleting your account through Settings &gt; Delete Account</li>
-            <li>Contacting us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a></li>
+            <li>Contacting us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></li>
           </ul>
           <p>Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal.</p>
 
@@ -694,7 +694,7 @@ export default function TermsPage() {
           <p>In compliance with the TAKE IT DOWN Act (effective May 2025):</p>
           <ul>
             <li>We will remove identified non-consensual intimate imagery within 48 hours of valid notification</li>
-            <li>Victims may submit removal requests to: <a href="mailto:dmca@notforget.ai">dmca@notforget.ai</a></li>
+            <li>Victims may submit removal requests to: <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></li>
             <li>We maintain processes to prevent re-upload of removed content</li>
           </ul>
 
@@ -717,7 +717,7 @@ export default function TermsPage() {
           <p>Users may report prohibited content by:</p>
           <ul>
             <li>Using the in-app reporting feature</li>
-            <li>Contacting us at: <a href="mailto:dmca@notforget.ai">dmca@notforget.ai</a></li>
+            <li>Contacting us at: <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></li>
           </ul>
           <p>We investigate all reports and take appropriate action.</p>
 
@@ -734,7 +734,7 @@ export default function TermsPage() {
           <h3>13.5 Appeal Process</h3>
           <p>If your content is removed or your account is actioned, you may appeal by:</p>
           <ul>
-            <li>Contacting us at: <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a></li>
+            <li>Contacting us at: <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></li>
             <li>Providing a detailed explanation of why you believe the action was in error</li>
             <li>Waiting for our review (typically within 10 business days)</li>
           </ul>
@@ -748,7 +748,7 @@ export default function TermsPage() {
           <p>In accordance with the Digital Millennium Copyright Act (DMCA), we have designated an agent to receive notifications of claimed infringement:</p>
           <p><strong>DMCA Designated Agent</strong><br />
           WinkyPie by Minimax Development<br />
-          Email: <a href="mailto:dmca@notforget.ai">dmca@notforget.ai</a></p>
+          Email: <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></p>
 
           <h3>14.2 DMCA Notice Requirements</h3>
           <p>If you believe your copyrighted work has been infringed, please provide a written notification containing:</p>
@@ -968,7 +968,7 @@ export default function TermsPage() {
           <ul>
             <li>Deleting your account through Settings &gt; Delete Account</li>
             <li>Uninstalling the App from your device</li>
-            <li>Contacting us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a></li>
+            <li>Contacting us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></li>
           </ul>
 
           <h3>20.3 Effect on Subscriptions</h3>
@@ -996,7 +996,7 @@ export default function TermsPage() {
           <h2 id="section-21">21. Dispute Resolution</h2>
 
           <h3>21.1 Informal Resolution</h3>
-          <p>Before initiating formal dispute resolution, you agree to contact us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a> and attempt to resolve the dispute informally for at least 30 days. Most disputes can be resolved this way.</p>
+          <p>Before initiating formal dispute resolution, you agree to contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> and attempt to resolve the dispute informally for at least 30 days. Most disputes can be resolved this way.</p>
 
           <h3>21.2 Binding Arbitration (US Users)</h3>
           <p><strong>FOR USERS IN THE UNITED STATES:</strong></p>
@@ -1013,7 +1013,7 @@ export default function TermsPage() {
           <p>Unless both parties agree otherwise, the arbitrator may not consolidate more than one person&apos;s claims and may not preside over any form of representative or class proceeding.</p>
 
           <h3>21.4 Opt-Out</h3>
-          <p>You may opt out of the arbitration agreement and class action waiver by sending written notice to <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a> within 30 days of first accepting these Terms. Your notice must include your name, address, email, and a clear statement that you wish to opt out.</p>
+          <p>You may opt out of the arbitration agreement and class action waiver by sending written notice to <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> within 30 days of first accepting these Terms. Your notice must include your name, address, email, and a clear statement that you wish to opt out.</p>
 
           <h3>21.5 Non-US Users</h3>
           <p>If you are not located in the United States, disputes shall be resolved in accordance with Section 22 (Governing Law and Jurisdiction).</p>
@@ -1118,7 +1118,7 @@ export default function TermsPage() {
           <p><strong>Storage:</strong> Biometric identifiers are stored securely and destroyed within 60 seconds of processing completion.</p>
 
           <h3>23.6 Other US States</h3>
-          <p>If you are a resident of Virginia, Colorado, Connecticut, Utah, Oregon, Montana, Delaware, Iowa, New Hampshire, New Jersey, Nebraska, Tennessee, Maryland, Minnesota, Indiana, Kentucky, Rhode Island, or another state with comprehensive privacy laws, you may have additional rights. Please contact us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a> to exercise any applicable rights.</p>
+          <p>If you are a resident of Virginia, Colorado, Connecticut, Utah, Oregon, Montana, Delaware, Iowa, New Hampshire, New Jersey, Nebraska, Tennessee, Maryland, Minnesota, Indiana, Kentucky, Rhode Island, or another state with comprehensive privacy laws, you may have additional rights. Please contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> to exercise any applicable rights.</p>
 
           <h3>23.7 Australia</h3>
           <p>If you are located in Australia:</p>
@@ -1189,7 +1189,7 @@ export default function TermsPage() {
           </ul>
 
           <h3>24.7 Apple Support</h3>
-          <p>Apple has no obligation to provide support services for the App. For support, please contact WinkyPie at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a>.</p>
+          <p>Apple has no obligation to provide support services for the App. For support, please contact WinkyPie at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a>.</p>
 
           <hr />
 
@@ -1292,10 +1292,10 @@ export default function TermsPage() {
           <p><strong>WinkyPie by Minimax Development</strong></p>
 
           <p><strong>General Inquiries and Privacy Requests:</strong><br />
-          Email: <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a></p>
+          Email: <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></p>
 
           <p><strong>DMCA and Copyright:</strong><br />
-          Email: <a href="mailto:dmca@notforget.ai">dmca@notforget.ai</a></p>
+          Email: <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></p>
 
           <p><strong>Location:</strong> Poland</p>
 

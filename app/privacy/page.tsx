@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             <li><strong>Third-Party AI Disclosure:</strong> Your images are processed by FAL.ai through secure API infrastructure. By using our AI features, you consent to this data sharing for image generation purposes only. Generated images are immediately downloaded to your device&apos;s local storage.</li>
             <li><strong>How do we keep your personal data secure?</strong> Our security is built on a &quot;privacy-by-design&quot; principle. We implement technical measures like encryption in transit and, most importantly, we do not permanently store your images on our servers.</li>
             <li><strong>What are your rights?</strong> Depending on your region, you have rights concerning your personal data, including the right to access, correct, delete your information, and delete your account.</li>
-            <li><strong>How can you exercise your rights?</strong> You can exercise your rights by contacting us directly at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a> or by using the account deletion feature within the Application (Settings &gt; Delete Account). We will address your request in compliance with applicable data protection laws.</li>
+            <li><strong>How can you exercise your rights?</strong> You can exercise your rights by contacting us directly at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> or by using the account deletion feature within the Application (Settings &gt; Delete Account). We will address your request in compliance with applicable data protection laws.</li>
           </ul>
 
           <hr />
@@ -82,7 +82,7 @@ export default function PrivacyPage() {
 
           <p><strong>WinkyPie by Minimax Development</strong><br />Poland</p>
 
-          <p>For any privacy-related questions or requests, please contact us at: <strong><a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a></strong></p>
+          <p>For any privacy-related questions or requests, please contact us at: <strong><a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></strong></p>
 
           <p>We aim to process user data transparently and in accordance with applicable data protection legislation, including the European Union&apos;s General Data Protection Regulation (GDPR) and the EU AI Act.</p>
 
@@ -232,13 +232,13 @@ export default function PrivacyPage() {
 
           <p>Our Service is not intended for use by anyone under the age of 16. We do not knowingly collect personally identifiable information from children under 16. If we become aware that we have collected data from a child under 16 without verification of parental consent, we will take steps to remove that information.</p>
 
-          <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a> so we can take appropriate action.</p>
+          <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> so we can take appropriate action.</p>
 
           <hr />
 
           <h2 id="section-8">8. Your Rights as the Data Subject</h2>
 
-          <p>You have certain rights regarding your personal data. These rights may vary depending on your location but generally include the right to access, rectify, erase, or object to the processing of your data. To exercise any of your rights, please contact us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a>.</p>
+          <p>You have certain rights regarding your personal data. These rights may vary depending on your location but generally include the right to access, rectify, erase, or object to the processing of your data. To exercise any of your rights, please contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a>.</p>
 
           <hr />
 
@@ -262,7 +262,7 @@ export default function PrivacyPage() {
 
           <p>If you have any questions or comments regarding this Privacy Policy, please contact us:</p>
 
-          <p><strong>By email:</strong> <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a></p>
+          <p><strong>By email:</strong> <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></p>
 
           <hr />
 
@@ -291,7 +291,7 @@ export default function PrivacyPage() {
 
           <p>When you delete your account through Settings &gt; Delete Account, we immediately delete all your locally stored images, preferences, and backend data. Due to the nature of our service, we cannot erase images that you may have exported or shared outside the Application before deletion.</p>
 
-          <p>To exercise these rights, contact us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a>. We can assist you by submitting a data deletion request to our subscription management service on your behalf using your anonymous App User ID. You also have the right to lodge a complaint with a data protection authority.</p>
+          <p>To exercise these rights, contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a>. We can assist you by submitting a data deletion request to our subscription management service on your behalf using your anonymous App User ID. You also have the right to lodge a complaint with a data protection authority.</p>
 
           <p>Contact details for your Data Protection Authority:</p>
           <ul>
@@ -318,7 +318,7 @@ export default function PrivacyPage() {
 
           <p>We process images which may contain facial features. This data is used solely to provide the service you explicitly requested and is not used for profiling or inference purposes beyond generating your requested image.</p>
 
-          <p>To exercise these rights, please contact us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a>.</p>
+          <p>To exercise these rights, please contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a>.</p>
 
           <hr />
 
@@ -336,7 +336,7 @@ export default function PrivacyPage() {
             <li>Right to opt-out of profiling in furtherance of decisions that produce legal or similarly significant effects (we do not engage in such profiling)</li>
           </ul>
 
-          <p>To exercise these rights, contact us at <a href="mailto:privacy@notforget.ai">privacy@notforget.ai</a>. We will respond to your request within the timeframe required by applicable law.</p>
+          <p>To exercise these rights, contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a>. We will respond to your request within the timeframe required by applicable law.</p>
 
           <hr />
 

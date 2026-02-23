@@ -23,7 +23,7 @@ export default function SupportPage() {
           <div className="bg-gradient-to-br from-primary to-secondary rounded-2xl p-8 text-center mb-10">
             <h2 className="text-foreground text-xl font-semibold mb-4">Contact Our Support Team</h2>
             <a
-              href="mailto:support-winkypie@notforget.ai"
+              href="mailto:winkypie.app@gmail.com"
               className="inline-block bg-foreground text-background px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-all hover:-translate-y-0.5"
             >
               winkypie.app@gmail.com
