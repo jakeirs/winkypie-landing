@@ -1,102 +1,168 @@
 import Image from 'next/image'
 
-const features = [
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    title: 'One Selfie Is Enough',
-    description: 'Upload a single selfie and unlock unlimited pose possibilities. No need for endless photo shoots.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: '100+ Pro Poses',
-    description: 'Choose from our curated library of professional poses. Sitting, standing, business, casual - we have it all.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-    title: 'Instant AI Generation',
-    description: 'Our advanced AI transforms your selfie into professional photos in seconds. Real-time, realistic results.',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-      </svg>
-    ),
-    title: '100% Private',
-    description: 'Your photos never leave your device. Everything is processed and stored locally. Your privacy is guaranteed.',
-  },
+const galleryRow1 = [
+  '/poses/cat-1__car_golden-hours_tshirt.jpg',
+  '/poses/m-cat-1__car-interior_casual-selfie_confident-smirk_natural-sunlight_high-contrast.jpg',
+  '/poses/cat-2__coffee_eyes-closed_face-to-sun_outdoor.jpg',
+  '/poses/cat-3__hand-in-pocket_outdoor_black-door_eye-contact_confident.jpg',
+  '/poses/m-cat-1__bedroom_mirror-selfie_confident_window-light_messy-bed.jpg',
+  '/poses/cat-4__boat_outdoor_sunny-white-top-direct-gaze.jpg',
+  '/poses/cat-5__sitting_eye-contact_business_mid-shot.jpg',
+  '/poses/cat-1__sunglasses_outside.jpg',
+]
+
+const galleryRow2 = [
+  '/poses/cat-2__sitting-on-stairs_outdoor_indirect-gaze_looking-up_dreamy.jpg',
+  '/poses/m-cat-1__car-interior_head-tilt-selfie_relaxed-smirk_athletic-jersey_natural-daylight.jpg',
+  '/poses/cat-3__looking-back_over-the-shoulder_outdoor_eye-contact.jpg',
+  '/poses/cat-4__dreamy_golden-hour_over-the-shoulder_looking-back_outdoor_park.jpg',
+  '/poses/m-cat-1__domestic-interior_low-angle-portrait_hand-behind-head_warm-overhead-lighting_contemplative-mood.jpg',
+  '/poses/cat-5__walk_sunshine_glasses_full-body-shot.jpg',
+  '/poses/cat-1__gym_headphones_side-shot.jpg',
+  '/poses/cat-2__direct-gaze_hand-in-hair_outdoor.jpg',
+]
+
+const miniPoses = [
+  '/poses/cat-1__cozy_indoor_sweet_relaxed.jpg',
+  '/poses/cat-2__rest-in-hands_indoor_direct-gaze.jpg',
+  '/poses/cat-3__indoor_leaning-on-wall_eye-contact_smiling.jpg',
+  '/poses/cat-4__direct-gaze_indoor_smile-white-tshirt.jpg',
+  '/poses/cat-5__sitting_eye-contact_business_mid-shot_confident.jpg',
+  '/poses/m-cat-1__elevator-mirror-selfie_shoulder-check-pose_overhead-fluorescent-lighting_industrial-metallic-aesthetic_muscular-build.jpg',
 ]
 
 export function Features() {
   return (
     <section id="features" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Create your <span className="gradient-text">Pro Photo</span>
+            Why you&apos;ll love <span className="gradient-text">WinkyPie</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
             Professional photos without the professional price tag. Everything you need to look your best.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted">{feature.description}</p>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="group relative md:row-span-2 rounded-3xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 min-h-80 hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20">
+            <div className="absolute inset-0">
+              <Image
+                src="/poses/cat-4__portrait_smiling_over-the_shoulder.jpg"
+                alt="AI-generated professional photo from a selfie"
+                fill
+                className="object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-card via-card/80 to-card/20" />
             </div>
-          ))}
+            <div className="relative h-full flex flex-col justify-end p-8">
+              <div className="w-14 h-14 rounded-2xl bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-2">One Selfie Is Enough</h3>
+              <p className="text-muted text-lg max-w-sm">
+                Upload a single selfie and unlock unlimited pose possibilities. No more awkward photo shoots.
+              </p>
+            </div>
+          </div>
+
+          <div className="group rounded-3xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 p-6 hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20">
+            <div className="grid grid-cols-6 gap-1.5 mb-5">
+              {miniPoses.map((src, i) => (
+                <div key={i} className="relative aspect-3/4 rounded-lg overflow-hidden">
+                  <Image
+                    src={src}
+                    alt="Pose example"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="80px"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold mb-1">500+ Pro Poses</h3>
+            <p className="text-muted">Sitting, standing, business, casual, creative — curated for every vibe.</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="group rounded-3xl bg-card border border-border hover:border-primary/30 transition-all duration-500 p-6 flex flex-col justify-between hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20">
+              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white mb-auto group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-xl font-bold mb-1">Instant AI</h3>
+                <p className="text-muted text-sm">Pro photos in seconds. Realistic results every time.</p>
+              </div>
+            </div>
+
+            <div className="group rounded-3xl bg-card border border-border hover:border-primary/30 transition-all duration-500 p-6 flex flex-col justify-between hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20">
+              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white mb-auto group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div className="mt-6">
+                <h3 className="text-xl font-bold mb-1">100% Private</h3>
+                <p className="text-muted text-sm">Photos never leave your device. Everything stays local.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-16 relative">
-          <div className="gradient-border p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-bold mb-4">
-                  Pick a pose, own the spotlight
-                </h3>
-                <p className="text-muted mb-6">
-                  Browse through our extensive collection of professional poses.
-                  Whether you need a LinkedIn headshot or a casual Instagram photo,
-                  WinkyPie has you covered.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm">Sitting</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm">Standing</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm">Business</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm">Casual</span>
-                  <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm">Creative</span>
+        <div className="mt-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+              Pick a pose, <span className="gradient-text">own the spotlight</span>
+            </h3>
+            <p className="text-muted">Browse our ever-growing collection of professional poses</p>
+          </div>
+
+          <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+            <div className="flex gap-3 mb-3 animate-scroll-left w-max">
+              {[...galleryRow1, ...galleryRow1].map((src, i) => (
+                <div key={i} className="relative w-32 h-44 sm:w-40 sm:h-56 shrink-0 rounded-2xl overflow-hidden">
+                  <Image
+                    src={src}
+                    alt="Pose example"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 128px, 160px"
+                  />
                 </div>
-              </div>
-              <div className="relative h-[300px] rounded-2xl overflow-hidden">
-                <Image
-                  src="/sample.jpg"
-                  alt="Pose selection preview"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+              ))}
             </div>
+
+            <div className="flex gap-3 animate-scroll-right w-max">
+              {[...galleryRow2, ...galleryRow2].map((src, i) => (
+                <div key={i} className="relative w-32 h-44 sm:w-40 sm:h-56 shrink-0 rounded-2xl overflow-hidden">
+                  <Image
+                    src={src}
+                    alt="Pose example"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 128px, 160px"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-3 mt-8">
+            {['Selfie', 'Sitting', 'Standing', 'Business', 'Casual', 'Creative', 'Outdoor', 'Indoor'].map((tag) => (
+              <span key={tag} className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium hover:bg-primary/20 transition-colors cursor-default">
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </div>
