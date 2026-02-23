@@ -25,10 +25,10 @@ export function Testimonials() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Loved by <span className="gradient-text">thousands</span>
+            Built for <span className="gradient-text">everyone</span>
           </h2>
           <p className="text-lg text-muted max-w-2xl mx-auto">
-            Join the growing community of people transforming their photos with WinkyPie.
+            Professional photos in seconds — no photographer, no studio, no hassle.
           </p>
         </div>
 
@@ -66,18 +66,18 @@ export function Testimonials() {
 
         <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-muted">
           <div className="text-center">
-            <div className="text-3xl font-bold text-foreground">100K+</div>
-            <div className="text-sm">Downloads</div>
+            <div className="text-3xl font-bold text-foreground">100%</div>
+            <div className="text-sm">On-Device Privacy</div>
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">
-            <div className="text-3xl font-bold text-foreground">4.9</div>
-            <div className="text-sm">App Rating</div>
+            <div className="text-3xl font-bold text-foreground">&lt;30s</div>
+            <div className="text-sm">Per Photo</div>
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">
-            <div className="text-3xl font-bold text-foreground">1M+</div>
-            <div className="text-sm">Photos Generated</div>
+            <div className="text-3xl font-bold text-foreground">Free</div>
+            <div className="text-sm">To Get Started</div>
           </div>
         </div>
       </div>

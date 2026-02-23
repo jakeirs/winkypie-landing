@@ -11,7 +11,7 @@ export function CTA() {
               Ready to transform your photos?
             </h2>
             <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
-              Join thousands of users who are already creating stunning professional photos with WinkyPie. Download now and get started for free.
+              Transform your selfies into stunning professional photos — no photoshoot required. Download now and get started for free.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
