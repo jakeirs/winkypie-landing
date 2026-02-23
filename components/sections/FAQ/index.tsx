@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react'
 
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
+
 const faqs = [
   {
     question: 'How does WinkyPie work?',
@@ -104,18 +106,20 @@ export function FAQ() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-primary/3 rounded-full blur-[128px] pointer-events-none" />
 
       <div className="relative max-w-3xl mx-auto">
-        <div className="text-center mb-16 sm:mb-20">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">
-            FAQ
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
-            Got questions?{' '}
-            <span className="gradient-text">We&apos;ve got answers</span>
-          </h2>
-          <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about WinkyPie.
-          </p>
-        </div>
+        <AnimateOnScroll>
+          <div className="text-center mb-16 sm:mb-20">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">
+              FAQ
+            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
+              Got questions?{' '}
+              <span className="gradient-text">We&apos;ve got answers</span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+              Everything you need to know about WinkyPie.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
         <div className="space-y-3">
           {faqs.map((faq, index) => (

@@ -97,6 +97,33 @@ body {
   }
 }
 
+.scroll-animate {
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.scroll-fade-up {
+  transform: translateY(60px);
+}
+
+.scroll-fade-left {
+  transform: translateX(-80px);
+}
+
+.scroll-fade-right {
+  transform: translateX(80px);
+}
+
+.scroll-scale-in {
+  transform: scale(0.88);
+}
+
+.scroll-animate.in-view {
+  opacity: 1;
+  transform: none;
+}
+
 .animate-scroll-left {
   animation: scroll-left 30s linear infinite;
 }

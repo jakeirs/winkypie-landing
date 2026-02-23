@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
+
 const heroPhotos = [
   '/poses/cat-4__portrait_smiling_over-the_shoulder.jpg',
   '/poses/cat-3__hand-in-pocket_outdoor_black-door_eye-contact_confident.jpg',
@@ -78,14 +80,16 @@ export function Features() {
   return (
     <section id="features" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Why you&apos;ll love <span className="gradient-text">WinkyPie</span>
-          </h2>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
-            Professional photos without the professional price tag. Everything you need to look your best.
-          </p>
-        </div>
+        <AnimateOnScroll>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+              Why you&apos;ll love <span className="gradient-text">WinkyPie</span>
+            </h2>
+            <p className="text-lg text-muted max-w-2xl mx-auto">
+              Professional photos without the professional price tag. Everything you need to look your best.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
         <div className="grid md:grid-cols-2 gap-4">
           <div className="group relative md:row-span-2 rounded-3xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 min-h-80 hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20">
@@ -182,12 +186,14 @@ export function Features() {
         </div>
 
         <div className="mt-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-2">
-              Pick a pose, <span className="gradient-text">own the spotlight</span>
-            </h3>
-            <p className="text-muted">Browse our ever-growing collection of professional poses</p>
-          </div>
+          <AnimateOnScroll>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+                Pick a pose, <span className="gradient-text">own the spotlight</span>
+              </h3>
+              <p className="text-muted">Browse our ever-growing collection of professional poses</p>
+            </div>
+          </AnimateOnScroll>
 
           <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
             <div className="flex gap-3 mb-3 animate-scroll-left w-max">

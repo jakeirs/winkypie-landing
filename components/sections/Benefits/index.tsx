@@ -1,3 +1,5 @@
+import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
+
 const benefits = [
   {
     icon: (
@@ -64,35 +66,39 @@ export function Benefits() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-150 h-150 bg-primary/3 rounded-full blur-[128px] pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto">
-        <div className="text-center mb-16 sm:mb-20">
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">
-            Why WinkyPie
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
-            Everything you need,{' '}
-            <span className="gradient-text">nothing you don&apos;t</span>
-          </h2>
-          <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
-            The smarter way to create professional photos. Here&apos;s what makes us different.
-          </p>
-        </div>
+        <AnimateOnScroll>
+          <div className="text-center mb-16 sm:mb-20">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">
+              Why WinkyPie
+            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5">
+              Everything you need,{' '}
+              <span className="gradient-text">nothing you don&apos;t</span>
+            </h2>
+            <p className="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed">
+              The smarter way to create professional photos. Here&apos;s what makes us different.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
         <div className="grid md:grid-cols-[1fr_1px_1fr] gap-8 md:gap-0">
           <div className="space-y-10 md:pr-12 lg:pr-16">
             {left.map((item, i) => (
-              <div key={i} className="group flex gap-4 items-start">
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-secondary/30 group-hover:scale-110 transition-all duration-300">
-                  {item.icon}
+              <AnimateOnScroll key={i} animation="fade-left" delay={i * 100}>
+                <div className="group flex gap-4 items-start">
+                  <div className="shrink-0 w-10 h-10 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-secondary/30 group-hover:scale-110 transition-all duration-300">
+                    {item.icon}
+                  </div>
+                  <div className="pt-0.5">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-1.5 group-hover:text-white transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted text-sm sm:text-base leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="pt-0.5">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-1.5 group-hover:text-white transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted text-sm sm:text-base leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
 
@@ -100,19 +106,21 @@ export function Benefits() {
 
           <div className="space-y-10 md:pl-12 lg:pl-16">
             {right.map((item, i) => (
-              <div key={i} className="group flex gap-4 items-start">
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-secondary/30 group-hover:scale-110 transition-all duration-300">
-                  {item.icon}
+              <AnimateOnScroll key={i} animation="fade-right" delay={i * 100}>
+                <div className="group flex gap-4 items-start">
+                  <div className="shrink-0 w-10 h-10 rounded-xl bg-linear-to-br from-primary/20 to-secondary/20 flex items-center justify-center text-primary group-hover:from-primary/30 group-hover:to-secondary/30 group-hover:scale-110 transition-all duration-300">
+                    {item.icon}
+                  </div>
+                  <div className="pt-0.5">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-1.5 group-hover:text-white transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted text-sm sm:text-base leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="pt-0.5">
-                  <h3 className="text-lg sm:text-xl font-semibold mb-1.5 group-hover:text-white transition-colors duration-300">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted text-sm sm:text-base leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
