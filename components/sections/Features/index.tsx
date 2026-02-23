@@ -1,4 +1,16 @@
+'use client'
+
 import Image from 'next/image'
+import { useState, useEffect, useCallback } from 'react'
+
+const heroPhotos = [
+  '/poses/cat-4__portrait_smiling_over-the_shoulder.jpg',
+  '/poses/cat-3__hand-in-pocket_outdoor_black-door_eye-contact_confident.jpg',
+  '/poses/cat-1__car_golden-hours_tshirt.jpg',
+  '/poses/cat-2__coffee_eyes-closed_face-to-sun_outdoor.jpg',
+  '/poses/cat-4__boat_outdoor_sunny-white-top-direct-gaze.jpg',
+  '/poses/m-cat-3__urban-street_over-the-shoulder_golden-hour_walking-away.jpg',
+]
 
 const galleryRow1 = [
   '/poses/cat-1__car_golden-hours_tshirt.jpg',
@@ -45,9 +57,49 @@ const miniPoses = [
   '/poses/cat-4__direct-gaze_indoor_smile-white-tshirt.jpg',
   '/poses/cat-5__sitting_eye-contact_business_mid-shot_confident.jpg',
   '/poses/m-cat-1__elevator-mirror-selfie_shoulder-check-pose_overhead-fluorescent-lighting_industrial-metallic-aesthetic_muscular-build.jpg',
+  '/poses/cat-2__indirect-gaze_hand-on-chin_crossed-legs.jpg',
+  '/poses/cat-3__squat_confident_eye-contact_outdoor_fashion.jpg',
+  '/poses/cat-4__turtle-neck_hand-to-chin_elegant_indoor_indirect-gaze.jpg',
+  '/poses/m-cat-2__urban-balcony_seated-leg-cross_cheerful-and-spontaneous_cream-corduroy-jacket_diffused-natural-light.jpg',
+  '/poses/cat-1__direct-gaze_indoor_fresh-look.jpg',
+  '/poses/m-cat-5__studio-portrait_arms-crossed-pose_rim-lighting_confident-smile_corporate-blazer.jpg',
 ]
 
 export function Features() {
+  const [heroIndex, setHeroIndex] = useState(0)
+  const [poseOffset, setPoseOffset] = useState(0)
+  const [isPosesPaused, setIsPosesPaused] = useState(false)
+  const visiblePoses = 6
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % heroPhotos.length)
+    }, 3000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const nextPoses = useCallback(() => {
+    setPoseOffset((prev) => (prev + 1) % miniPoses.length)
+  }, [])
+
+  const prevPoses = useCallback(() => {
+    setPoseOffset((prev) => (prev - 1 + miniPoses.length) % miniPoses.length)
+  }, [])
+
+  useEffect(() => {
+    if (isPosesPaused) return
+    const interval = setInterval(nextPoses, 2500)
+    return () => clearInterval(interval)
+  }, [isPosesPaused, nextPoses])
+
+  const getVisiblePoses = () => {
+    const poses = []
+    for (let i = 0; i < visiblePoses; i++) {
+      poses.push(miniPoses[(poseOffset + i) % miniPoses.length])
+    }
+    return poses
+  }
+
   return (
     <section id="features" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -63,12 +115,18 @@ export function Features() {
         <div className="grid md:grid-cols-2 gap-4">
           <div className="group relative md:row-span-2 rounded-3xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 min-h-80 hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20">
             <div className="absolute inset-0">
-              <Image
-                src="/poses/cat-4__portrait_smiling_over-the_shoulder.jpg"
-                alt="AI-generated professional photo from a selfie"
-                fill
-                className="object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700"
-              />
+              {heroPhotos.map((src, i) => (
+                <Image
+                  key={src}
+                  src={src}
+                  alt="AI-generated professional photo from a selfie"
+                  fill
+                  className={`object-cover transition-all duration-1000 ease-in-out group-hover:scale-105 ${
+                    i === heroIndex ? 'opacity-40' : 'opacity-0'
+                  }`}
+                  priority={i === 0}
+                />
+              ))}
               <div className="absolute inset-0 bg-linear-to-t from-card via-card/80 to-card/20" />
             </div>
             <div className="relative h-full flex flex-col justify-end p-8">
@@ -82,27 +140,78 @@ export function Features() {
               <p className="text-muted text-lg max-w-sm">
                 Upload a single selfie and unlock unlimited pose possibilities. No more awkward photo shoots.
               </p>
+              <div className="flex gap-1.5 mt-4">
+                {heroPhotos.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setHeroIndex(i)}
+                    className={`h-1 rounded-full transition-all duration-500 ${
+                      i === heroIndex ? 'w-6 bg-primary' : 'w-2 bg-white/30 hover:bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="group rounded-3xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 p-6 hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20">
-            <div className="grid grid-cols-6 gap-1.5 mb-5">
-              {miniPoses.map((src, i) => (
-                <div key={i} className="relative aspect-3/4 rounded-lg overflow-hidden">
-                  <Image
-                    src={src}
-                    alt="Pose example"
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    sizes="80px"
-                  />
-                </div>
-              ))}
+          <div
+            className="group rounded-3xl overflow-hidden bg-card border border-border hover:border-primary/30 transition-all duration-500 p-6 hover:shadow-[0_0_40px_-12px] hover:shadow-primary/20"
+            onMouseEnter={() => setIsPosesPaused(true)}
+            onMouseLeave={() => setIsPosesPaused(false)}
+          >
+            <div className="relative mb-5">
+              <div className="grid grid-cols-6 gap-1.5">
+                {getVisiblePoses().map((src, i) => (
+                  <div
+                    key={`${poseOffset}-${i}`}
+                    className="relative aspect-3/4 rounded-lg overflow-hidden animate-pose-fade-in"
+                  >
+                    <Image
+                      src={src}
+                      alt="Pose example"
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      sizes="80px"
+                    />
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={prevPoses}
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1 w-7 h-7 rounded-full bg-card/80 border border-border flex items-center justify-center text-white/70 hover:text-white hover:bg-card opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={nextPoses}
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1 w-7 h-7 rounded-full bg-card/80 border border-border flex items-center justify-center text-white/70 hover:text-white hover:bg-card opacity-0 group-hover:opacity-100 transition-all duration-300 backdrop-blur-sm"
+              >
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
-            <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-secondary flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-primary/20">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="flex gap-1">
+                {Array.from({ length: Math.ceil(miniPoses.length / visiblePoses) }).map((_, i) => {
+                  const currentPage = Math.floor(poseOffset / visiblePoses) % Math.ceil(miniPoses.length / visiblePoses)
+                  return (
+                    <div
+                      key={i}
+                      className={`h-1 rounded-full transition-all duration-300 ${
+                        i === currentPage ? 'w-4 bg-primary' : 'w-1.5 bg-white/20'
+                      }`}
+                    />
+                  )
+                })}
+              </div>
             </div>
             <h3 className="text-xl font-bold mb-1">500+ Pro Poses</h3>
             <p className="text-muted">Sitting, standing, business, casual, creative — curated for every vibe.</p>
