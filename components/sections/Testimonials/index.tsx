@@ -71,8 +71,8 @@ export function Testimonials() {
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">
-            <div className="text-3xl font-bold text-foreground">&lt;30s</div>
-            <div className="text-sm">Per Photo</div>
+            <div className="text-3xl font-bold text-foreground">Instant</div>
+            <div className="text-sm">Results</div>
           </div>
           <div className="w-px h-12 bg-border" />
           <div className="text-center">
