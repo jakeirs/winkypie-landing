@@ -10,9 +10,9 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navLinks = [
-    { href: '#features', label: 'Features' },
-    { href: '#how-it-works', label: 'How It Works' },
-    { href: '#faq', label: 'FAQ' },
+    { href: '/#features', label: 'Features' },
+    { href: '/#how-it-works', label: 'How It Works' },
+    { href: '/#faq', label: 'FAQ' },
   ]
 
   return (
@@ -43,7 +43,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Button href="#download" size="sm">
+            <Button href="/#download" size="sm">
               Download App
             </Button>
           </div>
@@ -91,7 +91,7 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Button href="#download" className="mt-2">
+              <Button href="/#download" className="mt-2">
                 Download App
               </Button>
             </nav>
