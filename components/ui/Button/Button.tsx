@@ -37,7 +37,7 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={combinedStyles}>
+      <a href={href} onClick={onClick} className={combinedStyles}>
         {children}
       </a>
     )

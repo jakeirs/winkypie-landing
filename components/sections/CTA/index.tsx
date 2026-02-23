@@ -1,4 +1,8 @@
+'use client'
+
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
+
+import { trackDownloadClick } from '@/lib/gtag'
 
 export function CTA() {
   return (
@@ -21,6 +25,7 @@ export function CTA() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="#"
+                  onClick={() => trackDownloadClick('cta_button')}
                   className="inline-flex items-center justify-center gap-3 bg-black text-white px-6 py-4 rounded-xl hover:bg-black/80 transition-colors"
                 >
                   <svg

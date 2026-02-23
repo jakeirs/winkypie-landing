@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from 'react'
 
+import { trackDownloadClick } from '@/lib/gtag'
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -43,6 +44,7 @@ export function Hero() {
             <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
               <a
                 href="#"
+                onClick={() => trackDownloadClick('hero_button')}
                 className="inline-flex items-center justify-center gap-2 bg-white text-black px-4 py-2 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl hover:scale-105 transition-all"
               >
                 <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">

@@ -6,6 +6,8 @@ import { useState } from 'react'
 
 import Button from '@/components/ui/Button/Button'
 
+import { trackDownloadClick } from '@/lib/gtag'
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -43,7 +45,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Button href="/#download" size="sm">
+            <Button href="/#download" size="sm" onClick={() => trackDownloadClick('header_button')}>
               Download App
             </Button>
           </div>
@@ -91,7 +93,7 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <Button href="/#download" className="mt-2">
+              <Button href="/#download" className="mt-2" onClick={() => trackDownloadClick('header_mobile_button')}>
                 Download App
               </Button>
             </nav>
