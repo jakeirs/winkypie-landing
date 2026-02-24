@@ -78,7 +78,7 @@ export function Features() {
   }, [])
 
   return (
-    <section id="features" className="py-20 px-4">
+    <section id="features" className="py-20 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-12">

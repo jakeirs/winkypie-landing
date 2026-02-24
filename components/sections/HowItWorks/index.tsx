@@ -31,7 +31,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 px-4 bg-card/50">
+    <section id="how-it-works" className="py-20 px-4 bg-card/50 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-16">
