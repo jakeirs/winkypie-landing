@@ -147,6 +147,30 @@ body {
   animation: scroll-left 20s linear infinite;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animate {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .animate-scroll-left,
+  .animate-scroll-right,
+  .animate-mini-scroll {
+    animation: none;
+  }
+
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 .phone-mockup {
   position: relative;
   background: #1C1C1E;

@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://winkypie.app'),
   title: 'WinkyPie | Transform Any Selfie Into a Pro Photo',
   description: 'One selfie is enough. Pick a pose, generate magic, and own the spotlight. Your photos stay private on your device.',
   keywords: ['AI photo', 'selfie', 'professional photo', 'photo generator', 'AI portrait', 'mobile app'],
@@ -27,11 +28,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'WinkyPie',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'WinkyPie - Transform Any Selfie Into a Pro Photo' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'WinkyPie | Transform Any Selfie Into a Pro Photo',
     description: 'One selfie is enough. Pick a pose, generate magic, and own the spotlight.',
+    images: ['/og-image.png'],
   },
 }
 
@@ -47,7 +50,9 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
-        <MetaPixel pixelId="1045571365299146" />
+        {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
+          <MetaPixel pixelId={process.env.NEXT_PUBLIC_META_PIXEL_ID} />
+        )}
         <CookieBanner />
       </body>
     </html>

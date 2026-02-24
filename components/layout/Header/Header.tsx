@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 import Button from '@/components/ui/Button/Button'
 
@@ -10,6 +10,7 @@ import { trackDownloadClick } from '@/lib/gtag'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
 
   const navLinks = [
     { href: '/#features', label: 'Features' },
@@ -17,8 +18,29 @@ export default function Header() {
     { href: '/#faq', label: 'FAQ' },
   ]
 
+  useEffect(() => {
+    if (!isMenuOpen) return
+
+    function handleClickOutside(e: MouseEvent) {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    function handleEscape(e: KeyboardEvent) {
+      if (e.key === 'Escape') setIsMenuOpen(false)
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('keydown', handleEscape)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('keydown', handleEscape)
+    }
+  }, [isMenuOpen])
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+    <header ref={menuRef} className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-2">
@@ -28,6 +50,7 @@ export default function Header() {
               width={40}
               height={40}
               className="rounded-lg"
+              priority
             />
             <span className="text-xl font-bold">WinkyPie</span>
           </Link>
@@ -51,9 +74,11 @@ export default function Header() {
           </div>
 
           <button
+            type="button"
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
           >
             <svg
               className="w-6 h-6"

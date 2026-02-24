@@ -12,7 +12,7 @@ export function getConsentCookie(): ConsentValue | null {
 }
 
 export function setConsentCookie(value: ConsentValue): void {
-  document.cookie = `${CONSENT_COOKIE}=${value}; max-age=${CONSENT_MAX_AGE}; path=/; SameSite=Lax`
+  document.cookie = `${CONSENT_COOKIE}=${value}; max-age=${CONSENT_MAX_AGE}; path=/; SameSite=Lax; Secure`
   window.dispatchEvent(new Event('consentChanged'))
 }
 

@@ -1,24 +1,26 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useSyncExternalStore } from 'react'
 
 import Script from 'next/script'
 
 import { getConsentCookie } from '@/lib/cookies'
 
+function subscribeToConsent(callback: () => void) {
+  window.addEventListener('consentChanged', callback)
+  return () => window.removeEventListener('consentChanged', callback)
+}
+
+function getConsentSnapshot() {
+  return getConsentCookie() === 'granted'
+}
+
+function getServerSnapshot() {
+  return false
+}
+
 export default function GoogleAnalytics({ gaId }: { gaId: string }) {
-  const [consent, setConsent] = useState(false)
-
-  useEffect(() => {
-    setConsent(getConsentCookie() === 'granted')
-
-    function onConsentChanged() {
-      setConsent(getConsentCookie() === 'granted')
-    }
-
-    window.addEventListener('consentChanged', onConsentChanged)
-    return () => window.removeEventListener('consentChanged', onConsentChanged)
-  }, [])
+  const consent = useSyncExternalStore(subscribeToConsent, getConsentSnapshot, getServerSnapshot)
 
   if (!consent) return null
 

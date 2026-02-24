@@ -122,8 +122,10 @@ export function Features() {
               <div className="flex gap-1.5 mt-4">
                 {heroPhotos.map((_, i) => (
                   <button
+                    type="button"
                     key={i}
                     onClick={() => setHeroIndex(i)}
+                    aria-label={`Show photo ${i + 1}`}
                     className={`h-1 rounded-full transition-all duration-500 ${
                       i === heroIndex ? 'w-6 bg-primary' : 'w-2 bg-white/30 hover:bg-white/50'
                     }`}

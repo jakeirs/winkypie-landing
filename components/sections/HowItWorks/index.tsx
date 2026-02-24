@@ -14,7 +14,7 @@ const steps = [
   {
     number: '02',
     title: 'Pick a pose',
-    description: 'Browse 100+ professional poses and select the one that fits your vibe.',
+    description: 'Browse 500+ professional poses and select the one that fits your vibe.',
     image: '/mobile-app/mobile-app-step-2.png',
     imageAlt: 'Pick a pose step',
     tilt: 'rotate-0',

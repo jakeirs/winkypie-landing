@@ -26,6 +26,7 @@ export function CTA() {
                 <a
                   href="#"
                   onClick={() => trackDownloadClick('cta_button')}
+                  aria-label="Download WinkyPie on the App Store"
                   className="inline-flex items-center justify-center gap-3 bg-black text-white px-6 py-4 rounded-xl hover:bg-black/80 transition-colors"
                 >
                   <svg

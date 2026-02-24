@@ -1,9 +1,10 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import Header from '@/components/layout/Header/Header'
 import Footer from '@/components/layout/Footer/Footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Support | WinkyPie',
   description: 'Get help and support for the WinkyPie app. Contact our support team or find answers to frequently asked questions.',
 }

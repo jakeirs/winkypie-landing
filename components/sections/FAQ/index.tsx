@@ -58,6 +58,8 @@ function FAQItem({ faq, isOpen, onToggle }: {
       }`}
     >
       <button
+        type="button"
+        aria-expanded={isOpen}
         className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer"
         onClick={onToggle}
       >

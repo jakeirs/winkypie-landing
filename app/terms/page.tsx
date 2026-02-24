@@ -1,9 +1,10 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import Header from '@/components/layout/Header/Header'
 import Footer from '@/components/layout/Footer/Footer'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Terms and Conditions | WinkyPie',
   description: 'Terms and Conditions for WinkyPie by Minimax Development. Read the legally binding agreement governing your use of the WinkyPie app.',
 }
