@@ -8,9 +8,12 @@ import Script from 'next/script'
 import { getConsentCookie } from '@/lib/cookies'
 
 export default function MetaPixel({ pixelId }: { pixelId: string }) {
-  const [consent, setConsent] = useState(() => getConsentCookie() === 'granted')
+  const [consent, setConsent] = useState(false)
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setConsent(getConsentCookie() === 'granted')
+
     function onConsentChanged() {
       setConsent(getConsentCookie() === 'granted')
     }
