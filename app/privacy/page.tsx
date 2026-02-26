@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto legal-content">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Privacy Policy for WinkyPie</h1>
-          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: January 25, 2026</p>
+          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: February 26, 2026</p>
 
           <p>This Privacy Policy for WinkyPie by Minimax Development (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) explains how we collect, store, use, and share information (&quot;process&quot;) when you engage with our services (&quot;Services&quot;) in relation to the WinkyPie mobile application (&quot;Application&quot;). This includes instances when you:</p>
 
@@ -34,16 +34,18 @@ export default function PrivacyPage() {
           <p>This summary outlines the key highlights of our Privacy Policy. For more detailed information, please refer to the table of contents below to navigate to the relevant sections.</p>
 
           <ul>
-            <li><strong>What personal data do we process?</strong> When you use our Services, we process a minimal amount of data necessary for the app to function. This includes:
+            <li><strong>What personal data do we process?</strong> When you use our Services, we process a minimal amount of data necessary for the app to function and to improve our Services. This includes:
               <ul>
                 <li><strong>User Content:</strong> The images you choose to upload from your device&apos;s camera or gallery for AI processing.</li>
                 <li><strong>Transaction Information:</strong> An anonymous, randomly generated user ID to manage your subscription status. We do not process your payment details directly.</li>
                 <li><strong>Technical Information:</strong> Standard technical data, such as your IP address, which is automatically processed by our backend servers during your session.</li>
+                <li><strong>Analytics Data:</strong> Anonymized usage data such as app interactions, feature usage, session information, device type, and operating system version, collected via Amplitude to help us understand how our Application is used and to improve the user experience.</li>
+                <li><strong>Error and Crash Data:</strong> Automatic error reports, crash logs, and performance data collected via Sentry to help us identify and fix technical issues in the Application.</li>
               </ul>
             </li>
             <li><strong>Do we process sensitive personal data?</strong> We do not intentionally process sensitive personal data. Our service processes images which may contain faces, but this data is used solely for AI image generation and is not used to identify you. We ask that you do not upload any content containing other sensitive personal information.</li>
             <li><strong>How do we process your information?</strong> We process your information to deliver, enhance, and manage our Services, primarily to facilitate the AI image generation feature. We also use it to manage subscriptions, safeguard security, and comply with legal obligations.</li>
-            <li><strong>When do we share personal information?</strong> We share your information only with essential third-party service providers required for our Application to function. This includes cloud backend infrastructure, AI service providers (FAL.ai), and a subscription management service. We do not sell your data.</li>
+            <li><strong>When do we share personal information?</strong> We share your information only with essential third-party service providers required for our Application to function and improve. This includes cloud backend infrastructure, AI service providers (FAL.ai), a subscription management service, an analytics provider (Amplitude), and an error monitoring service (Sentry). We do not sell your data.</li>
             <li><strong>Third-Party AI Disclosure:</strong> Your images are processed by FAL.ai through secure API infrastructure. By using our AI features, you consent to this data sharing for image generation purposes only. Generated images are immediately downloaded to your device&apos;s local storage.</li>
             <li><strong>How do we keep your personal data secure?</strong> Our security is built on a &quot;privacy-by-design&quot; principle. We implement technical measures like encryption in transit and, most importantly, we do not permanently store your images on our servers.</li>
             <li><strong>What are your rights?</strong> Depending on your region, you have rights concerning your personal data, including the right to access, correct, delete your information, and delete your account.</li>
@@ -70,7 +72,7 @@ export default function PrivacyPage() {
               <li><a href="#section-13">For Residents of Other US States with Privacy Laws</a></li>
               <li><a href="#section-14">Illinois Residents (Biometric Information Privacy Act)</a></li>
               <li><a href="#section-15">Texas Residents (Capture or Use of Biometric Identifier Act)</a></li>
-              <li><a href="#section-16">Analytics (Future Implementation)</a></li>
+              <li><a href="#section-16">Analytics and Error Monitoring</a></li>
               <li><a href="#section-17">Changes to This Privacy Policy</a></li>
             </ol>
           </div>
@@ -116,6 +118,32 @@ export default function PrivacyPage() {
 
           <p>When you use our Services, our cloud backend infrastructure (located in the United States) may automatically log standard technical information required for communication. This includes your Internet Protocol (IP) address, device type, and operating system version. This data is processed only for the duration of your session to ensure the secure and functional delivery of our Service.</p>
 
+          <h3>Analytics Data</h3>
+
+          <p>We use Amplitude, a third-party analytics platform, to collect anonymized usage data about how you interact with our Application. This data helps us understand user behavior, improve features, and enhance the overall user experience. The analytics data we collect includes:</p>
+
+          <ul>
+            <li><strong>App interaction events:</strong> such as which features you use, screens you view, and actions you take within the Application</li>
+            <li><strong>Session information:</strong> session duration, frequency of use, and app version</li>
+            <li><strong>Device information:</strong> device type, operating system version, and screen resolution</li>
+            <li><strong>General location:</strong> country-level location derived from your IP address (your IP address is not stored by Amplitude in its raw form)</li>
+          </ul>
+
+          <p><strong>Important:</strong> Analytics data is collected in an anonymized manner and cannot be used to personally identify you. We do not link analytics data to your uploaded images, generated content, or any other personally identifiable information. You can opt out of analytics data collection through the Application settings.</p>
+
+          <h3>Error and Crash Data</h3>
+
+          <p>We use Sentry, a third-party error monitoring platform, to automatically collect diagnostic data when the Application encounters errors, crashes, or performance issues. This data helps us quickly identify and resolve technical problems. The error and crash data we collect includes:</p>
+
+          <ul>
+            <li><strong>Error and crash reports:</strong> stack traces, error messages, and the application state at the time of the error</li>
+            <li><strong>Performance data:</strong> app startup time, screen load times, and slow operations</li>
+            <li><strong>Device information:</strong> device model, operating system version, available memory, and battery level</li>
+            <li><strong>App context:</strong> app version, build number, and the screen or feature where the error occurred</li>
+          </ul>
+
+          <p><strong>Important:</strong> Error reports are collected automatically to ensure the stability and quality of our Application. Sentry does not collect your uploaded images, generated content, or any personally identifiable information. IP addresses may be processed temporarily for error grouping but are not stored in their raw form.</p>
+
           <hr />
 
           <h2 id="section-3">3. Purposes of Processing Personal Data and Legal Bases</h2>
@@ -145,6 +173,16 @@ export default function PrivacyPage() {
                 <td>Ensuring Security and Stability</td>
                 <td>Technical Information</td>
                 <td>Legitimate Interest (Art. 6(1)(f)). We have a legitimate interest in protecting our Service from fraud and ensuring it functions correctly.</td>
+              </tr>
+              <tr>
+                <td>Analytics and Service Improvement</td>
+                <td>Analytics Data (anonymized usage events, device info, session data)</td>
+                <td>Legitimate Interest (Art. 6(1)(f)). We have a legitimate interest in understanding how users interact with our Application in order to improve it. Where required by applicable law, we obtain your consent before collecting analytics data.</td>
+              </tr>
+              <tr>
+                <td>Error Monitoring and Crash Reporting</td>
+                <td>Error and Crash Data (crash logs, stack traces, performance metrics, device info)</td>
+                <td>Legitimate Interest (Art. 6(1)(f)). We have a legitimate interest in monitoring and resolving errors, crashes, and performance issues to maintain the stability and quality of our Application.</td>
               </tr>
             </tbody>
           </table>
@@ -183,6 +221,53 @@ export default function PrivacyPage() {
 
           <p>We use a third-party subscription management service to securely manage in-app purchases and verify your subscription status. We do not process your payment details directly - all payment processing is handled by Apple (App Store) or Google (Play Store). Subscription status data is retained until you delete your account.</p>
 
+          <h3>Analytics (Amplitude)</h3>
+
+          <p>We use Amplitude, Inc. as our analytics data processor to collect and analyze anonymized usage data from the Application. Amplitude acts as a data processor on our behalf and processes analytics data in accordance with our instructions and their privacy commitments.</p>
+
+          <p><strong>Data processed by Amplitude:</strong></p>
+          <ul>
+            <li>Anonymized event data (feature usage, screen views, user actions)</li>
+            <li>Session metadata (session duration, app version)</li>
+            <li>Device metadata (device type, OS version, screen resolution)</li>
+            <li>Country-level location (derived from IP address; raw IP is not retained)</li>
+          </ul>
+
+          <p><strong>Amplitude&apos;s commitments:</strong></p>
+          <ul>
+            <li>Amplitude processes data on servers located in the United States</li>
+            <li>Amplitude is GDPR-compliant and supports Standard Contractual Clauses (SCCs) for international data transfers</li>
+            <li>Amplitude is SOC 2 Type II certified</li>
+            <li>Analytics data is retained for the duration of our contract with Amplitude, after which it is deleted</li>
+            <li>Amplitude does not sell your data or use it for its own purposes</li>
+          </ul>
+
+          <p>For more information, see <a href="https://amplitude.com/privacy" target="_blank" rel="noopener noreferrer">Amplitude&apos;s Privacy Policy</a>.</p>
+
+          <h3>Error Monitoring (Sentry)</h3>
+
+          <p>We use Sentry (Functional Software, Inc., San Francisco, CA, USA) as our error monitoring data processor to collect and analyze crash reports and performance data from the Application. Sentry acts as a data processor on our behalf and processes error data in accordance with our instructions and their privacy commitments.</p>
+
+          <p><strong>Data processed by Sentry:</strong></p>
+          <ul>
+            <li>Crash reports and stack traces</li>
+            <li>Error messages and application state at the time of failure</li>
+            <li>Performance metrics (app startup time, screen load times)</li>
+            <li>Device metadata (device model, OS version, available memory)</li>
+            <li>App metadata (app version, build number, screen context)</li>
+          </ul>
+
+          <p><strong>Sentry&apos;s commitments:</strong></p>
+          <ul>
+            <li>Sentry processes data on servers located in the United States</li>
+            <li>Sentry is GDPR-compliant and supports Standard Contractual Clauses (SCCs) for international data transfers</li>
+            <li>Sentry is SOC 2 Type II certified</li>
+            <li>Error data is retained for 90 days by default, after which it is automatically deleted</li>
+            <li>Sentry does not sell your data or use it for its own purposes</li>
+          </ul>
+
+          <p>For more information, see <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">Sentry&apos;s Privacy Policy</a>.</p>
+
           <h3>International Data Transfers</h3>
 
           <p>Our service providers are located in the United States. When we transfer your data outside the European Economic Area (EEA), we ensure that appropriate safeguards, such as Standard Contractual Clauses (SCCs), are in place to protect your information in accordance with GDPR requirements.</p>
@@ -202,6 +287,8 @@ export default function PrivacyPage() {
             <li><strong>Generated Images (FAL.ai):</strong> Available for up to 7 days on FAL.ai servers, then automatically deleted</li>
             <li><strong>Your Device (Local Storage):</strong> Permanently stored until you delete them</li>
             <li><strong>Subscription Data:</strong> Retained until account deletion</li>
+            <li><strong>Analytics Data (Amplitude):</strong> Retained in anonymized form for the duration of our contract with Amplitude; not linked to your identity</li>
+            <li><strong>Error and Crash Data (Sentry):</strong> Retained for 90 days, then automatically deleted</li>
           </ul>
 
           <p><strong>Important:</strong> All generated images are immediately downloaded to your device&apos;s local storage. The retention on FAL.ai servers is a temporary cache - your images are stored permanently on your device under your control.</p>
@@ -380,11 +467,97 @@ export default function PrivacyPage() {
 
           <hr />
 
-          <h2 id="section-16">16. Analytics (Future Implementation)</h2>
+          <h2 id="section-16">16. Analytics and Error Monitoring</h2>
 
-          <p><strong>Currently:</strong> No third-party analytics services are implemented in the Application.</p>
+          <p>We use <strong>Amplitude</strong> (Amplitude, Inc., San Francisco, CA, USA) as our analytics service provider. Amplitude acts as a <strong>data processor</strong> on our behalf, processing anonymized usage data strictly according to our instructions and for the purposes described in this Privacy Policy.</p>
 
-          <p>We may implement analytics services in the future. Any analytics data collected would be anonymized and could not be used to identify you personally. We will update this Privacy Policy before implementing any analytics services.</p>
+          <h3>What data is collected</h3>
+
+          <p>Amplitude collects the following anonymized data from the Application:</p>
+
+          <ul>
+            <li><strong>Usage events:</strong> interactions with features, screens viewed, buttons tapped, and actions taken within the Application</li>
+            <li><strong>Session data:</strong> session start/end times, session duration, and app version</li>
+            <li><strong>Device information:</strong> device model, operating system name and version, screen resolution, and language setting</li>
+            <li><strong>General location:</strong> country and region derived from your IP address (Amplitude does not store your raw IP address)</li>
+          </ul>
+
+          <p><strong>Amplitude does NOT collect:</strong></p>
+          <ul>
+            <li>Your name, email address, or any personally identifiable information</li>
+            <li>Your uploaded images or generated content</li>
+            <li>Your payment or subscription details</li>
+            <li>Precise geolocation data</li>
+          </ul>
+
+          <h3>Why we collect analytics data</h3>
+
+          <p>We use analytics data to:</p>
+          <ul>
+            <li>Understand how users navigate and interact with the Application</li>
+            <li>Identify the most popular features and areas for improvement</li>
+            <li>Diagnose technical issues, crashes, and performance bottlenecks</li>
+            <li>Make data-informed decisions about future development priorities</li>
+          </ul>
+
+          <h3>Amplitude as a data processor</h3>
+
+          <p>Amplitude processes analytics data on our behalf under a Data Processing Agreement (DPA) that ensures:</p>
+          <ul>
+            <li>Data is processed only according to our documented instructions</li>
+            <li>Appropriate technical and organizational security measures are in place (SOC 2 Type II certified)</li>
+            <li>Standard Contractual Clauses (SCCs) govern international data transfers from the EEA</li>
+            <li>Amplitude does not sell, share, or use analytics data for its own purposes</li>
+            <li>Data is deleted upon termination of our agreement with Amplitude</li>
+          </ul>
+
+          <h3>Sentry — Error Monitoring</h3>
+
+          <p>We use <strong>Sentry</strong> (Functional Software, Inc., San Francisco, CA, USA) as our error monitoring service provider. Sentry acts as a <strong>data processor</strong> on our behalf, collecting and processing crash reports and performance data strictly according to our instructions.</p>
+
+          <h3>What error data is collected</h3>
+
+          <p>Sentry automatically collects the following diagnostic data when the Application encounters an error or performance issue:</p>
+
+          <ul>
+            <li><strong>Crash and error reports:</strong> stack traces, error messages, exception types, and the application state leading to the error</li>
+            <li><strong>Performance traces:</strong> app startup duration, screen rendering times, and slow network requests</li>
+            <li><strong>Device context:</strong> device model, operating system version, available memory, battery level, and screen orientation</li>
+            <li><strong>App context:</strong> app version, build number, the screen or feature where the issue occurred, and breadcrumb trail of recent user actions (anonymized)</li>
+          </ul>
+
+          <p><strong>Sentry does NOT collect:</strong></p>
+          <ul>
+            <li>Your name, email address, or any personally identifiable information</li>
+            <li>Your uploaded images or generated content</li>
+            <li>Your payment or subscription details</li>
+            <li>The content of your interactions (only the fact that an action occurred is logged as a breadcrumb)</li>
+          </ul>
+
+          <h3>Why we collect error data</h3>
+
+          <p>We use error monitoring data to:</p>
+          <ul>
+            <li>Detect and fix crashes and bugs that affect the user experience</li>
+            <li>Monitor Application performance and identify bottlenecks</li>
+            <li>Prioritize technical issues based on their frequency and impact</li>
+            <li>Ensure the overall stability and reliability of the Application</li>
+          </ul>
+
+          <h3>Sentry as a data processor</h3>
+
+          <p>Sentry processes error data on our behalf under a Data Processing Agreement (DPA) that ensures:</p>
+          <ul>
+            <li>Data is processed only according to our documented instructions</li>
+            <li>Appropriate technical and organizational security measures are in place (SOC 2 Type II certified)</li>
+            <li>Standard Contractual Clauses (SCCs) govern international data transfers from the EEA</li>
+            <li>Sentry does not sell, share, or use error data for its own purposes</li>
+            <li>Error data is automatically deleted after 90 days</li>
+          </ul>
+
+          <h3>Opting out of analytics</h3>
+
+          <p>You can opt out of analytics data collection at any time through the Application settings. When you opt out, no further analytics events will be sent to Amplitude from your device. Error monitoring via Sentry remains active to ensure Application stability, as it does not collect personally identifiable information.</p>
 
           <hr />
 
@@ -394,7 +567,7 @@ export default function PrivacyPage() {
 
           <p>The &quot;Last updated&quot; date at the top of this Privacy Policy indicates when the most recent revisions were made.</p>
 
-          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of January 25, 2026.</p>
+          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of February 26, 2026.</p>
 
           <div className="text-center pt-6 border-t border-border mt-12">
             <Link href="/" className="text-primary hover:underline">
