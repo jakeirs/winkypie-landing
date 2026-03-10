@@ -156,8 +156,8 @@ export default function TermsPage() {
             <li>Generating unique AI-created images based on your inputs</li>
           </ul>
 
-          <h3>4.3 Local Storage</h3>
-          <p>Generated images are saved exclusively to your device&apos;s local storage. We do not permanently store your generated images on our servers. You are responsible for backing up and managing your locally stored images.</p>
+          <h3>4.3 Image Storage</h3>
+          <p>Generated images are saved to your device&apos;s local storage. Your uploaded selfie is temporarily processed by our secure AI service. Images on our backend are deleted shortly after processing; images on FAL.ai servers are automatically deleted within 7 days. We do not permanently store your uploaded or generated images. You are responsible for backing up and managing your locally stored images.</p>
 
           <h3>4.4 Winky Shots-Based Access</h3>
           <p>AI generation features are accessed using Winky Shots, which are included with your Subscription. Each AI image generation consumes one Winky Shot.</p>
@@ -407,7 +407,7 @@ export default function TermsPage() {
           <p>The license you grant to us is:</p>
           <ul>
             <li><strong>Purpose-limited:</strong> Only for providing the Services you request</li>
-            <li><strong>Time-limited:</strong> Only for the duration necessary to process your request (approximately 60 seconds for processing images)</li>
+            <li><strong>Time-limited:</strong> Only for the duration necessary to process your request. Images are automatically deleted from FAL.ai servers within 7 days</li>
             <li><strong>Non-permanent:</strong> We do not permanently store your User Content on our servers</li>
           </ul>
 
@@ -415,7 +415,7 @@ export default function TermsPage() {
           <p><strong>IMPORTANT:</strong> Your User Content, including any biometric data derived from your photographs, will NOT be used to train, improve, or develop AI models. Our AI service providers operate under Zero Data Retention policies and paid-tier terms that prohibit the use of user data for model training.</p>
 
           <h3>8.5 License Survival</h3>
-          <p>The license granted in Section 8.2 terminates when your User Content is deleted from our systems (within 60 seconds of processing completion).</p>
+          <p>The license granted in Section 8.2 terminates when your User Content is deleted from our systems (images are deleted from our backend shortly after processing and from FAL.ai servers within 7 days).</p>
 
           <hr />
 
@@ -463,7 +463,7 @@ export default function TermsPage() {
             <tbody>
               <tr>
                 <td>Processing Images (Our servers)</td>
-                <td>Maximum 60 seconds</td>
+                <td>Deleted shortly after processing</td>
                 <td>Automatic deletion upon processing completion</td>
               </tr>
               <tr>
@@ -486,7 +486,7 @@ export default function TermsPage() {
 
           <p><strong>Important:</strong> All generated images are immediately downloaded to your device&apos;s local storage. The 7-day retention on FAL.ai servers is a temporary cache only - your images are stored permanently on your device under your control.</p>
 
-          <p>Biometric data is destroyed immediately upon completion of its initial purpose (AI image generation) or within 60 seconds, whichever occurs first.</p>
+          <p>Biometric data is destroyed upon completion of its initial purpose (AI image generation). Images are deleted from our backend shortly after processing and automatically deleted from FAL.ai servers within 7 days.</p>
 
           <h3>9.4 Written Consent (BIPA/CUBI Compliance)</h3>
           <div className="important-box">
@@ -494,7 +494,7 @@ export default function TermsPage() {
             <ol>
               <li><strong>Collection:</strong> The capture and collection of biometric identifiers (facial geometry) from photographs you upload</li>
               <li><strong>Processing:</strong> The processing of your biometric data by our AI service providers (FAL.ai) for the sole purpose of generating AI images</li>
-              <li><strong>Temporary Storage:</strong> The temporary storage of your biometric data as necessary to provide the Service (maximum 60 seconds)</li>
+              <li><strong>Temporary Storage:</strong> The temporary storage of your biometric data as necessary to provide the Service (automatically deleted from FAL.ai servers within 7 days)</li>
               <li><strong>Disclosure to Service Providers:</strong> The disclosure of your biometric data to our AI service providers under agreements that protect your data</li>
             </ol>
           </div>
@@ -792,7 +792,7 @@ export default function TermsPage() {
             <li>Our App immediately downloads generated images to your device&apos;s local storage</li>
             <li>FAL.ai is committed to GDPR compliance and data protection</li>
           </ul>
-          <p><strong>Important:</strong> FAL.ai&apos;s standard terms do not guarantee that your images will not be used for service improvement. For enterprise-level guarantees regarding AI model training, please contact us.</p>
+          <p><strong>Important:</strong> Your selfie is securely transmitted to FAL.ai for photo generation only and is not used for AI model training. FAL.ai&apos;s standard terms do not provide a formal &quot;Zero Data Retention&quot; guarantee. For enterprise-level guarantees, please contact us.</p>
 
           <h3>15.2 Subscription Management (RevenueCat)</h3>
           <p>We use RevenueCat to manage subscriptions and in-app purchases:</p>
@@ -805,7 +805,7 @@ export default function TermsPage() {
           <h3>15.3 Cloud Infrastructure (Convex)</h3>
           <p>Our backend services use cloud infrastructure located in the United States:</p>
           <ul>
-            <li>Images are processed temporarily and deleted within 60 seconds</li>
+            <li>Images are processed temporarily and deleted from our backend shortly after processing</li>
             <li>Technical data (IP address, device type) is processed during your session</li>
             <li>Data transfers are protected by appropriate safeguards</li>
           </ul>
@@ -1098,7 +1098,7 @@ export default function TermsPage() {
 
           <p><strong>Retention Policy:</strong> We maintain a publicly available retention schedule as described in Section 9.3.</p>
 
-          <p><strong>Destruction:</strong> Biometric data is destroyed within 60 seconds of processing completion or when the purpose has been satisfied, whichever occurs first.</p>
+          <p><strong>Destruction:</strong> Biometric data is destroyed when the purpose has been satisfied. Images are deleted from our backend shortly after processing and automatically deleted from FAL.ai servers within 7 days.</p>
 
           <p><strong>No Sale or Profit:</strong> We do not sell, lease, trade, or otherwise profit from your biometric data.</p>
 
@@ -1116,7 +1116,7 @@ export default function TermsPage() {
             <li>Use biometric identifiers for surveillance or tracking</li>
           </ul>
 
-          <p><strong>Storage:</strong> Biometric identifiers are stored securely and destroyed within 60 seconds of processing completion.</p>
+          <p><strong>Storage:</strong> Biometric identifiers are stored securely and automatically deleted from servers within 7 days of processing.</p>
 
           <h3>23.6 Other US States</h3>
           <p>If you are a resident of Virginia, Colorado, Connecticut, Utah, Oregon, Montana, Delaware, Iowa, New Hampshire, New Jersey, Nebraska, Tennessee, Maryland, Minnesota, Indiana, Kentucky, Rhode Island, or another state with comprehensive privacy laws, you may have additional rights. Please contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> to exercise any applicable rights.</p>
@@ -1338,7 +1338,7 @@ export default function TermsPage() {
               </tr>
               <tr>
                 <td><strong>Biometric Data</strong></td>
-                <td>Facial geometry processed for AI; deleted within 60 seconds</td>
+                <td>Facial geometry processed for AI; automatically deleted within 7 days</td>
               </tr>
               <tr>
                 <td><strong>AI Provider</strong></td>

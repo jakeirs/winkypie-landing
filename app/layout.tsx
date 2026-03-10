@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://winkypie.app'),
   title: 'WinkyPie | Transform Any Selfie Into a Pro Photo',
-  description: 'One selfie is enough. Pick a pose, generate magic, and own the spotlight. Your photos stay private on your device.',
+  description: 'One selfie is enough. Pick a pose, generate magic, and own the spotlight. Generated photos are saved locally on your device.',
   keywords: ['AI photo', 'selfie', 'professional photo', 'photo generator', 'AI portrait', 'mobile app'],
   openGraph: {
     title: 'WinkyPie | Transform Any Selfie Into a Pro Photo',

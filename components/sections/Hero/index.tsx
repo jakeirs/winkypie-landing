@@ -38,7 +38,7 @@ export function Hero() {
             </h1>
 
             <p className="text-base sm:text-xl text-muted mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
-              Choose from 500+ poses for men and women. AI-powered but realistic results from just one selfie. Your photos stay private on your device.
+              Choose from 500+ poses for men and women. AI-powered but realistic results from just one selfie. Generated photos are saved locally on your device.
             </p>
 
             <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">

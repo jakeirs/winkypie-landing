@@ -58,7 +58,7 @@ export default function SupportPage() {
             </div>
             <div>
               <strong className="text-foreground block mb-1">Is my data secure?</strong>
-              <p className="text-muted text-sm m-0">Yes! Your photos are processed securely and we follow industry-standard security practices. Read our <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link> for details.</p>
+              <p className="text-muted text-sm m-0">Yes! Your selfie is securely sent to our AI service for generation only and automatically deleted from servers within 7 days. Generated photos are saved locally on your device. Read our <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link> for details.</p>
             </div>
           </div>
 

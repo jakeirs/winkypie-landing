@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: 'Is my data private and secure?',
-    answer: 'Absolutely! Your privacy is our top priority. All photos are processed and stored locally on your device. We never upload, access, or share your images with anyone. Your photos remain yours and yours alone.',
+    answer: 'Absolutely! Your privacy is our top priority. Your selfie is securely sent to our AI service for photo generation only. Images are automatically deleted from servers within 7 days and are never used to train AI models. All generated photos are saved locally on your device.',
   },
   {
     question: 'How many photos can I generate?',

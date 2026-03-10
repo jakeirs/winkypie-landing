@@ -8,7 +8,7 @@ const benefits = [
       </svg>
     ),
     title: 'Privacy First',
-    description: 'All photos are stored locally on your device. We never upload or access your images.',
+    description: 'All generated photos are saved locally on your device. Your selfie is only temporarily processed by our secure AI service and automatically deleted within 7 days.',
   },
   {
     icon: (

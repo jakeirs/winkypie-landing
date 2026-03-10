@@ -47,7 +47,7 @@ export default function PrivacyPage() {
             <li><strong>How do we process your information?</strong> We process your information to deliver, enhance, and manage our Services, primarily to facilitate the AI image generation feature. We also use it to manage subscriptions, safeguard security, and comply with legal obligations.</li>
             <li><strong>When do we share personal information?</strong> We share your information only with essential third-party service providers required for our Application to function and improve. This includes cloud backend infrastructure, AI service providers (FAL.ai), a subscription management service, an analytics provider (Amplitude), and an error monitoring service (Sentry). We do not sell your data.</li>
             <li><strong>Third-Party AI Disclosure:</strong> Your images are processed by FAL.ai through secure API infrastructure. By using our AI features, you consent to this data sharing for image generation purposes only. Generated images are immediately downloaded to your device&apos;s local storage.</li>
-            <li><strong>How do we keep your personal data secure?</strong> Our security is built on a &quot;privacy-by-design&quot; principle. We implement technical measures like encryption in transit and, most importantly, we do not permanently store your images on our servers.</li>
+            <li><strong>How do we keep your personal data secure?</strong> Our security is built on a &quot;privacy-by-design&quot; principle. We implement technical measures like encryption in transit and minimize data retention. Your selfie is temporarily processed by our secure AI service and automatically deleted from servers within 7 days.</li>
             <li><strong>What are your rights?</strong> Depending on your region, you have rights concerning your personal data, including the right to access, correct, delete your information, and delete your account.</li>
             <li><strong>How can you exercise your rights?</strong> You can exercise your rights by contacting us directly at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> or by using the account deletion feature within the Application (Settings &gt; Delete Account). We will address your request in compliance with applicable data protection laws.</li>
           </ul>
@@ -215,7 +215,7 @@ export default function PrivacyPage() {
 
           <h3>Cloud Backend Infrastructure</h3>
 
-          <p>Our application uses cloud backend infrastructure located in the United States for temporary data processing. We use this service to temporarily handle the image you upload before sending it to the AI service. Images are deleted within 60 seconds of processing completion and are not permanently stored.</p>
+          <p>Our application uses cloud backend infrastructure located in the United States for temporary data processing. We use this service to temporarily handle the image you upload before sending it to the AI service. Images on our backend are deleted shortly after processing completion. Images processed by our AI service provider (FAL.ai) are automatically deleted within 7 days, per FAL.ai&apos;s data retention policy.</p>
 
           <h3>Subscription Management</h3>
 
@@ -283,7 +283,7 @@ export default function PrivacyPage() {
           <p>We do not permanently store, save, or catalog the photos you upload or the images generated for you on our servers. Specific retention periods are as follows:</p>
 
           <ul>
-            <li><strong>Processing Images (Cloud Backend):</strong> Deleted within 60 seconds of processing completion</li>
+            <li><strong>Processing Images (Cloud Backend):</strong> Deleted shortly after processing completion</li>
             <li><strong>Generated Images (FAL.ai):</strong> Available for up to 7 days on FAL.ai servers, then automatically deleted</li>
             <li><strong>Your Device (Local Storage):</strong> Permanently stored until you delete them</li>
             <li><strong>Subscription Data:</strong> Retained until account deletion</li>
@@ -309,9 +309,9 @@ export default function PrivacyPage() {
 
           <ul>
             <li><strong>Encryption in Transit:</strong> All data transmitted between your device and our servers is encrypted using industry-standard protocols (TLS/HTTPS).</li>
-            <li><strong>Data Minimization:</strong> Our primary security measure is our policy of not storing your images on our servers. By not holding the data, we minimize the risk of unauthorized access.</li>
+            <li><strong>Data Minimization:</strong> We do not permanently store your images on our servers. Uploaded photos are deleted from our backend shortly after processing. Images on FAL.ai servers are automatically deleted within 7 days.</li>
             <li><strong>Trusted Vendors:</strong> We rely on reputable, US-based service providers who maintain high standards of security for their infrastructure.</li>
-            <li><strong>Zero Data Retention:</strong> Our AI providers operate with policies that prevent your data from being stored or used for model training.</li>
+            <li><strong>Temporary Processing Only:</strong> Your selfie is securely sent to our AI service providers for photo generation only. Images are not used for AI model training.</li>
           </ul>
 
           <hr />
@@ -437,15 +437,15 @@ export default function PrivacyPage() {
           <ul>
             <li>The collection of biometric identifiers from your photographs</li>
             <li>The processing of such data by our AI service providers (FAL.ai)</li>
-            <li>The temporary storage necessary to provide the service (deleted within 60 seconds of processing)</li>
+            <li>The temporary storage necessary to provide the service (automatically deleted within 7 days per FAL.ai&apos;s retention policy)</li>
           </ul>
 
           <p><strong>Important BIPA Disclosures:</strong></p>
 
           <ul>
             <li><strong>Purpose:</strong> Biometric data is collected solely for the purpose of AI image generation at your request.</li>
-            <li><strong>Retention:</strong> Biometric data is not permanently stored. Processing images are deleted within 60 seconds; generated images on content delivery infrastructure are deleted after 7 days.</li>
-            <li><strong>Destruction Schedule:</strong> Biometric data is destroyed immediately upon completion of the initial purpose (image generation), or within 60 seconds, whichever occurs first.</li>
+            <li><strong>Retention:</strong> Biometric data is not permanently stored. Images on our backend are deleted shortly after processing. Images on FAL.ai servers (both input and generated) are automatically deleted within 7 days.</li>
+            <li><strong>Destruction Schedule:</strong> Biometric data is destroyed upon completion of the initial purpose (image generation). Images are automatically deleted from FAL.ai servers within 7 days of processing.</li>
             <li><strong>No Sale or Disclosure:</strong> We do not sell, lease, trade, or otherwise profit from biometric data. We do not disclose biometric data to third parties except as necessary to provide our service (our AI providers).</li>
             <li><strong>No Training:</strong> Your biometric data is not used to train AI models.</li>
           </ul>
@@ -461,7 +461,7 @@ export default function PrivacyPage() {
           <ul>
             <li>We capture biometric identifiers from photographs you voluntarily upload for AI image generation purposes.</li>
             <li>We do not sell, lease, or disclose biometric data to third parties except as necessary to provide our service through our AI processing partners.</li>
-            <li>Biometric data is not permanently stored and is deleted within 60 seconds of processing.</li>
+            <li>Biometric data is not permanently stored and is automatically deleted from servers within 7 days of processing.</li>
             <li>You may withdraw consent by discontinuing use of the AI image generation features.</li>
           </ul>
 
