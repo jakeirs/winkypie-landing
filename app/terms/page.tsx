@@ -16,8 +16,8 @@ export default function TermsPage() {
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto legal-content">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Terms and Conditions for WinkyPie</h1>
-          <p className="text-sm text-muted mb-1"><strong>Last Updated:</strong> January 25, 2026</p>
-          <p className="text-sm text-muted mb-8 pb-6 border-b border-border"><strong>Effective Date:</strong> January 25, 2026</p>
+          <p className="text-sm text-muted mb-1"><strong>Last Updated:</strong> March 15, 2026</p>
+          <p className="text-sm text-muted mb-8 pb-6 border-b border-border"><strong>Effective Date:</strong> March 15, 2026</p>
 
           <p>Welcome to WinkyPie. These Terms and Conditions (&quot;Terms,&quot; &quot;Agreement&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and WinkyPie by Minimax Development (&quot;WinkyPie,&quot; &quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) governing your access to and use of the WinkyPie mobile application (&quot;App,&quot; &quot;Application&quot;) and all related services (&quot;Services&quot;).</p>
 
@@ -107,6 +107,8 @@ export default function TermsPage() {
             <li><strong>&quot;User Content&quot;</strong> means photographs, images, and other content that you upload, submit, or provide to the App for processing.</li>
             <li><strong>&quot;Services&quot;</strong> means all features, functionality, and services provided through the App, including AI image generation, the Pose Library, and subscription management.</li>
             <li><strong>&quot;FAL.ai&quot;</strong> means our third-party AI service provider that processes images to generate AI content.</li>
+            <li><strong>&quot;OpenRouter&quot;</strong> means the third-party API gateway service we use to access Google Gemini for pose analysis.</li>
+            <li><strong>&quot;Google Gemini&quot;</strong> means the third-party AI model accessed via OpenRouter, used solely to analyze pose reference images and generate pose descriptions. Google Gemini does not receive or process your selfies, photographs, or any biometric data.</li>
           </ul>
 
           <hr />
@@ -472,6 +474,16 @@ export default function TermsPage() {
                 <td>Automatic deletion (App downloads immediately to your device)</td>
               </tr>
               <tr>
+                <td>Pose Reference Images (Google Gemini)</td>
+                <td>Up to 55 days (abuse monitoring only; no selfie/face data sent)</td>
+                <td>Automatic deletion by Google after monitoring period</td>
+              </tr>
+              <tr>
+                <td>Pose Reference Images (OpenRouter)</td>
+                <td>Zero Data Retention (not stored)</td>
+                <td>Not retained; forwarded to Google Gemini only</td>
+              </tr>
+              <tr>
                 <td>Your Device (Local)</td>
                 <td>Permanent until you delete</td>
                 <td>User-controlled deletion</td>
@@ -522,10 +534,11 @@ export default function TermsPage() {
 
           <h2 id="section-10">10. AI-Generated Content</h2>
 
-          <h3>10.1 AI Service Provider</h3>
-          <p>Our AI image generation features are powered by <strong>FAL.ai</strong>, a third-party AI service provider. By using our AI features, you acknowledge that:</p>
+          <h3>10.1 AI Service Providers</h3>
+          <p>Our AI image generation features are powered by <strong>FAL.ai</strong> (image generation) and <strong>Google Gemini via OpenRouter</strong> (pose analysis), both third-party AI service providers. By using our AI features, you acknowledge that:</p>
           <ul>
-            <li>Your images are transmitted to and processed by FAL.ai&apos;s infrastructure</li>
+            <li>Your selfie images are transmitted to and processed by FAL.ai&apos;s infrastructure for image generation</li>
+            <li>Pose reference images (not your selfie or face data) are sent to Google Gemini via OpenRouter for pose description generation</li>
             <li>Generated images are available on FAL.ai servers for up to 7 days before automatic deletion</li>
             <li>Our App immediately downloads generated images to your device&apos;s local storage</li>
             <li>Your uploaded photos are not used to train AI models</li>
@@ -793,6 +806,18 @@ export default function TermsPage() {
             <li>FAL.ai is committed to GDPR compliance and data protection</li>
           </ul>
           <p><strong>Important:</strong> Your selfie is securely transmitted to FAL.ai for photo generation only and is not used for AI model training. FAL.ai&apos;s standard terms do not provide a formal &quot;Zero Data Retention&quot; guarantee. For enterprise-level guarantees, please contact us.</p>
+
+          <h3>15.1.1 Google Gemini via OpenRouter (AI Pose Analysis)</h3>
+          <p>Our Application uses Google Gemini, accessed through the OpenRouter API gateway, to analyze pose reference images from our Pose Library and generate text descriptions of poses. By using our AI features, you acknowledge that:</p>
+          <ul>
+            <li>Only pose reference images from our Pose Library are sent to Google Gemini — <strong>your selfie, photographs, or any images containing your face are never sent to this service</strong></li>
+            <li>Google Gemini does not receive, process, or have access to any of your personal images or biometric data</li>
+            <li>Pose reference images are generic templates and do not contain personally identifiable information</li>
+            <li>OpenRouter acts as an API gateway and operates under a Zero Data Retention (ZDR) policy — it does not store prompts or request data</li>
+            <li>Google Gemini (paid API tier) does not use API data to train its models. Google may retain pose reference images for up to 55 days solely for abuse monitoring, after which they are automatically deleted</li>
+            <li>No personal data, selfies, or user identifiers are transmitted to OpenRouter or Google Gemini</li>
+          </ul>
+          <p>For more information, see <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter&apos;s Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&apos;s Privacy Policy</a>.</p>
 
           <h3>15.2 Subscription Management (RevenueCat)</h3>
           <p>We use RevenueCat to manage subscriptions and in-app purchases:</p>
@@ -1341,8 +1366,8 @@ export default function TermsPage() {
                 <td>Facial geometry processed for AI; automatically deleted within 7 days</td>
               </tr>
               <tr>
-                <td><strong>AI Provider</strong></td>
-                <td>FAL.ai; generated images downloaded immediately to your device</td>
+                <td><strong>AI Providers</strong></td>
+                <td>FAL.ai (image generation; images downloaded immediately to your device); Google Gemini via OpenRouter (pose analysis only; no face data sent)</td>
               </tr>
               <tr>
                 <td><strong>Generated Content</strong></td>
@@ -1365,7 +1390,7 @@ export default function TermsPage() {
 
           <hr />
 
-          <p className="mt-10 pt-6 border-t border-border italic text-muted">These Terms and Conditions are effective as of January 25, 2026.</p>
+          <p className="mt-10 pt-6 border-t border-border italic text-muted">These Terms and Conditions are effective as of March 15, 2026.</p>
           <p><em>WinkyPie by Minimax Development</em></p>
           <p><strong>Version:</strong> 01.2026<br />
           <strong>Document ID:</strong> terms_v_01.2026</p>

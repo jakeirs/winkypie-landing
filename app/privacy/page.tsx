@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto legal-content">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Privacy Policy for WinkyPie</h1>
-          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: February 26, 2026</p>
+          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: March 15, 2026</p>
 
           <p>This Privacy Policy for WinkyPie by Minimax Development (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) explains how we collect, store, use, and share information (&quot;process&quot;) when you engage with our services (&quot;Services&quot;) in relation to the WinkyPie mobile application (&quot;Application&quot;). This includes instances when you:</p>
 
@@ -45,8 +45,8 @@ export default function PrivacyPage() {
             </li>
             <li><strong>Do we process sensitive personal data?</strong> We do not intentionally process sensitive personal data. Our service processes images which may contain faces, but this data is used solely for AI image generation and is not used to identify you. We ask that you do not upload any content containing other sensitive personal information.</li>
             <li><strong>How do we process your information?</strong> We process your information to deliver, enhance, and manage our Services, primarily to facilitate the AI image generation feature. We also use it to manage subscriptions, safeguard security, and comply with legal obligations.</li>
-            <li><strong>When do we share personal information?</strong> We share your information only with essential third-party service providers required for our Application to function and improve. This includes cloud backend infrastructure, AI service providers (FAL.ai), a subscription management service, an analytics provider (Amplitude), and an error monitoring service (Sentry). We do not sell your data.</li>
-            <li><strong>Third-Party AI Disclosure:</strong> Your images are processed by FAL.ai through secure API infrastructure. By using our AI features, you consent to this data sharing for image generation purposes only. Generated images are immediately downloaded to your device&apos;s local storage.</li>
+            <li><strong>When do we share personal information?</strong> We share your information only with essential third-party service providers required for our Application to function and improve. This includes cloud backend infrastructure, AI service providers (FAL.ai for image generation, Google Gemini via OpenRouter for pose analysis), a subscription management service, an analytics provider (Amplitude), and an error monitoring service (Sentry). We do not sell your data.</li>
+            <li><strong>Third-Party AI Disclosure:</strong> Your selfie images are processed by FAL.ai through secure API infrastructure for AI image generation. Pose reference images (which do not contain your selfie or face data) are analyzed by Google Gemini (accessed via OpenRouter) to generate pose descriptions. By using our AI features, you consent to this data sharing. Generated images are immediately downloaded to your device&apos;s local storage.</li>
             <li><strong>How do we keep your personal data secure?</strong> Our security is built on a &quot;privacy-by-design&quot; principle. We implement technical measures like encryption in transit and minimize data retention. Your selfie is temporarily processed by our secure AI service and automatically deleted from servers within 7 days.</li>
             <li><strong>What are your rights?</strong> Depending on your region, you have rights concerning your personal data, including the right to access, correct, delete your information, and delete your account.</li>
             <li><strong>How can you exercise your rights?</strong> You can exercise your rights by contacting us directly at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> or by using the account deletion feature within the Application (Settings &gt; Delete Account). We will address your request in compliance with applicable data protection laws.</li>
@@ -213,6 +213,27 @@ export default function PrivacyPage() {
             <li>Your photos are stored permanently only on your local device, under your control</li>
           </ul>
 
+          <h3>AI Pose Analysis (Google Gemini via OpenRouter)</h3>
+
+          <p>We use Google Gemini, accessed through the OpenRouter API gateway, for AI-powered pose analysis. When you select a pose from our Pose Library, the pose reference image is sent to Google Gemini to generate a detailed text description of the pose. This description is then used as input for the AI image generation process.</p>
+
+          <p><strong>Important Distinction — No Face Data Sent:</strong></p>
+          <ul>
+            <li>Only pose reference images from our Pose Library are sent to Google Gemini — your selfie, photographs, or any images containing your face are <strong>never</strong> sent to this service</li>
+            <li>Google Gemini does not receive, process, or have access to any of your personal images or biometric data</li>
+            <li>Pose reference images are generic templates and do not contain personally identifiable information</li>
+          </ul>
+
+          <p><strong>Data Processing by OpenRouter/Google Gemini:</strong></p>
+          <ul>
+            <li>OpenRouter acts as an API gateway that routes requests to Google Gemini. OpenRouter operates under a Zero Data Retention (ZDR) policy and does not store prompts or request data, but forwards them to the downstream provider (Google)</li>
+            <li>Google Gemini (paid API tier) does not use API data to train its models. However, Google may retain API inputs (pose reference images) for up to 55 days solely for abuse monitoring purposes, after which they are automatically deleted</li>
+            <li>No personal data, user identifiers, selfies, or biometric information is transmitted to OpenRouter or Google Gemini — only generic pose reference images from our Pose Library</li>
+            <li>Both OpenRouter and Google maintain their own privacy policies and data protection commitments</li>
+          </ul>
+
+          <p>For more information, see <a href="https://openrouter.ai/privacy" target="_blank" rel="noopener noreferrer">OpenRouter&apos;s Privacy Policy</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&apos;s Privacy Policy</a>.</p>
+
           <h3>Cloud Backend Infrastructure</h3>
 
           <p>Our application uses cloud backend infrastructure located in the United States for temporary data processing. We use this service to temporarily handle the image you upload before sending it to the AI service. Images on our backend are deleted shortly after processing completion. Images processed by our AI service provider (FAL.ai) are automatically deleted within 7 days, per FAL.ai&apos;s data retention policy.</p>
@@ -285,6 +306,7 @@ export default function PrivacyPage() {
           <ul>
             <li><strong>Processing Images (Cloud Backend):</strong> Deleted shortly after processing completion</li>
             <li><strong>Generated Images (FAL.ai):</strong> Available for up to 7 days on FAL.ai servers, then automatically deleted</li>
+            <li><strong>Pose Analysis Data (Google Gemini):</strong> Pose reference images (not selfies) may be retained by Google for up to 55 days for abuse monitoring, then automatically deleted. OpenRouter (API gateway) operates under Zero Data Retention and does not store request data</li>
             <li><strong>Your Device (Local Storage):</strong> Permanently stored until you delete them</li>
             <li><strong>Subscription Data:</strong> Retained until account deletion</li>
             <li><strong>Analytics Data (Amplitude):</strong> Retained in anonymized form for the duration of our contract with Amplitude; not linked to your identity</li>
@@ -567,7 +589,7 @@ export default function PrivacyPage() {
 
           <p>The &quot;Last updated&quot; date at the top of this Privacy Policy indicates when the most recent revisions were made.</p>
 
-          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of February 26, 2026.</p>
+          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of March 15, 2026.</p>
 
           <div className="text-center pt-6 border-t border-border mt-12">
             <Link href="/" className="text-primary hover:underline">
