@@ -1,28 +1,24 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 import { trackDownloadClick } from '@/lib/gtag'
 
+const STEPS = [
+  '/mobile-app/mobile-app-step-1.png',
+  '/mobile-app/mobile-app-step-2.png',
+  '/mobile-app/mobile-app-step-3.png',
+]
+
 export function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const [currentStep, setCurrentStep] = useState(0)
 
   useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-
-    const handleTimeUpdate = () => {
-      if (video.currentTime >= 44) {
-        video.playbackRate = 0.5
-      } else if (video.currentTime >= 14) {
-        video.playbackRate = 4
-      } else {
-        video.playbackRate = 2
-      }
-    }
-
-    video.addEventListener('timeupdate', handleTimeUpdate)
-    return () => video.removeEventListener('timeupdate', handleTimeUpdate)
+    const interval = setInterval(() => {
+      setCurrentStep((prev) => (prev + 1) % STEPS.length)
+    }, 2500)
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -87,16 +83,18 @@ export function Hero() {
               <div className="phone-button-left" style={{ top: '8rem', height: '2.5rem' }} />
               <div className="phone-button-left" style={{ top: '11rem', height: '2.5rem' }} />
               <div className="phone-screen w-55 h-110 sm:w-70 sm:h-140 relative">
-                <video
-                  ref={videoRef}
-                  src="/video.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  className="w-full h-full object-cover"
-                />
+                {STEPS.map((src, index) => (
+                  <Image
+                    key={src}
+                    src={src}
+                    alt={`Step ${index + 1}`}
+                    fill
+                    className={`object-cover transition-opacity duration-700 ${
+                      index === currentStep ? 'opacity-100' : 'opacity-0'
+                    }`}
+                    priority={index === 0}
+                  />
+                ))}
               </div>
             </div>
 
