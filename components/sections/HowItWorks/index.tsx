@@ -64,7 +64,7 @@ export function HowItWorks() {
                         src={step.image}
                         alt={step.imageAlt}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   </div>

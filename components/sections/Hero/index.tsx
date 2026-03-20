@@ -82,14 +82,14 @@ export function Hero() {
               <div className="phone-button-left" style={{ top: '5.5rem', height: '1.5rem' }} />
               <div className="phone-button-left" style={{ top: '8rem', height: '2.5rem' }} />
               <div className="phone-button-left" style={{ top: '11rem', height: '2.5rem' }} />
-              <div className="phone-screen w-55 h-110 sm:w-70 sm:h-140 relative">
+              <div className="phone-screen w-55 h-[28rem] sm:w-70 sm:h-[36rem] relative">
                 {STEPS.map((src, index) => (
                   <Image
                     key={src}
                     src={src}
                     alt={`Step ${index + 1}`}
                     fill
-                    className={`object-cover transition-opacity duration-700 ${
+                    className={`object-contain transition-opacity duration-700 ${
                       index === currentStep ? 'opacity-100' : 'opacity-0'
                     }`}
                     priority={index === 0}
