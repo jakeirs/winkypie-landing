@@ -43,7 +43,7 @@ export function Hero() {
 
             <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
               <a
-                href="#"
+                href="https://apps.apple.com/us/app/winkypie/id6757441777"
                 onClick={() => trackDownloadClick('hero_button')}
                 aria-label="Download WinkyPie on the App Store"
                 className="inline-flex items-center justify-center gap-2 bg-white text-black px-4 py-2 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl hover:scale-105 transition-all"
@@ -94,8 +94,8 @@ export function Hero() {
                   muted
                   loop
                   playsInline
-                  preload="metadata"
-                  className="w-full h-full object-contain"
+                  preload="auto"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>

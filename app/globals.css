@@ -187,8 +187,7 @@ body {
 .phone-screen {
   border-radius: 2.25rem;
   overflow: hidden;
-  background: #0e0e0e;
-  padding-bottom: 0.5rem;
+  background: #1C1C1E;
 }
 
 .phone-button-right {
