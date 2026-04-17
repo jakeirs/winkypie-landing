@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: 'How many photos can I generate?',
-    answer: 'The free version allows you to generate a limited number of photos to try out the app. With our premium plans (Weekly, Monthly, or Yearly), you get access to unlimited generations and our full library of 500+ professional poses.',
+    answer: 'The free trial includes 5 Winky Shots to try the app. Premium plans (Weekly, Monthly, Half-Year, or Yearly) include a set number of Winky Shots per billing period — see the in-app paywall for current allocations. Each photo generation uses one Winky Shot, and all plans include access to our full library of 500+ professional poses.',
   },
   {
     question: 'What kind of poses are available?',

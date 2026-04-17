@@ -16,8 +16,8 @@ export default function TermsPage() {
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto legal-content">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Terms and Conditions for WinkyPie</h1>
-          <p className="text-sm text-muted mb-1"><strong>Last Updated:</strong> March 15, 2026</p>
-          <p className="text-sm text-muted mb-8 pb-6 border-b border-border"><strong>Effective Date:</strong> March 15, 2026</p>
+          <p className="text-sm text-muted mb-1"><strong>Last Updated:</strong> April 17, 2026</p>
+          <p className="text-sm text-muted mb-8 pb-6 border-b border-border"><strong>Effective Date:</strong> April 17, 2026</p>
 
           <p>Welcome to WinkyPie. These Terms and Conditions (&quot;Terms,&quot; &quot;Agreement&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and WinkyPie by Minimax Development (&quot;WinkyPie,&quot; &quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) governing your access to and use of the WinkyPie mobile application (&quot;App,&quot; &quot;Application&quot;) and all related services (&quot;Services&quot;).</p>
 
@@ -232,7 +232,7 @@ export default function TermsPage() {
               </tr>
               <tr>
                 <td><strong>Half-Year</strong></td>
-                <td>50 Winky Shots per month</td>
+                <td>300 Winky Shots per period</td>
                 <td>Every 6 months</td>
                 <td>Semi-annually</td>
               </tr>
@@ -347,7 +347,7 @@ export default function TermsPage() {
               </tr>
               <tr>
                 <td>Half-Year</td>
-                <td>50 Winky Shots per month</td>
+                <td>300 Winky Shots every 6 months</td>
               </tr>
             </tbody>
           </table>
