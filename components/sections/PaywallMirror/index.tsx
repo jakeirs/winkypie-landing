@@ -24,8 +24,9 @@ export function PaywallMirror() {
                 </div>
 
                 <p className="text-white/70 text-[12px] sm:text-[13px] max-w-md mx-auto leading-relaxed">
-                  Free trial available in-app. Manage or cancel anytime in your App Store
-                  account settings.
+                  Free trial available in-app. Subscription auto-renews unless cancelled
+                  at least 24 hours before the period ends. Manage or cancel anytime in
+                  your App Store account → Subscriptions.
                 </p>
               </div>
             </div>

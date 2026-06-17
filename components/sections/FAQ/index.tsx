@@ -1,6 +1,7 @@
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
+import { FaqStructuredData } from '@/components/ui/StructuredData/StructuredData'
 
-const faqs = [
+export const faqs = [
   {
     question: 'How does the AI actually work?',
     answer:
@@ -36,6 +37,7 @@ const faqs = [
 export function FAQ() {
   return (
     <section id="faq" className="px-4 py-14 lg:py-24">
+      <FaqStructuredData faqs={[...faqs]} />
       <div className="max-w-md lg:max-w-4xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-8 lg:mb-14">

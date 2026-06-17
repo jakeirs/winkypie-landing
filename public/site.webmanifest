@@ -1,0 +1,17 @@
+{
+  "name": "WinkyPie — Pro photos. No photographer.",
+  "short_name": "WinkyPie",
+  "description": "One selfie into pro AI photos for dating profiles.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e0e0e",
+  "theme_color": "#0e0e0e",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

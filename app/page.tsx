@@ -2,6 +2,7 @@ import Header from '@/components/layout/Header/Header'
 import Footer from '@/components/layout/Footer/Footer'
 
 import { Hero } from '@/components/sections/Hero'
+import { UseCases } from '@/components/sections/UseCases'
 import { StatsStrip } from '@/components/sections/StatsStrip'
 import { Features } from '@/components/sections/Features'
 import { HowItWorks } from '@/components/sections/HowItWorks'
@@ -14,8 +15,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <Hero />
+        <UseCases />
         <StatsStrip />
         <Features />
         <HowItWorks />

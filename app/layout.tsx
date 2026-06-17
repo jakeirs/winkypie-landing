@@ -1,9 +1,12 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Fraunces, Geist_Mono, Inter } from 'next/font/google'
 
 import CookieBanner from '@/components/ui/CookieBanner/CookieBanner'
 import GoogleAnalytics from '@/components/ui/GoogleAnalytics/GoogleAnalytics'
 import MetaPixel from '@/components/ui/MetaPixel/MetaPixel'
+import ScrollTracker from '@/components/ui/ScrollTracker/ScrollTracker'
+import StickyMobileCta from '@/components/ui/StickyMobileCta/StickyMobileCta'
+import { MobileAppStructuredData } from '@/components/ui/StructuredData/StructuredData'
 
 import './globals.css'
 
@@ -48,22 +51,24 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'WinkyPie',
     url: 'https://winkypie.app/',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'WinkyPie — Pro photos. No photographer.',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pro photos. No photographer.',
     description:
       'One selfie. ~30 seconds. AI photos that match what dating apps actually reward. 3 days free.',
-    images: ['/og-image.png'],
   },
+  manifest: '/site.webmanifest',
+  appleWebApp: {
+    title: 'WinkyPie',
+    statusBarStyle: 'black-translucent',
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0e0e0e',
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -76,7 +81,13 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistMono.variable} ${fraunces.variable} antialiased`}
       >
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        <MobileAppStructuredData />
         {children}
+        <StickyMobileCta />
+        <ScrollTracker />
         {process.env.NEXT_PUBLIC_GA_ID && (
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         )}
