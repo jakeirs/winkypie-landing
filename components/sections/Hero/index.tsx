@@ -1,106 +1,139 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
-import { trackDownloadClick } from '@/lib/gtag'
+import AppStoreBadge from '@/components/ui/AppStoreBadge/AppStoreBadge'
 
-const STEPS = [
-  '/mobile-app/mobile-app-step-1.png',
-  '/mobile-app/mobile-app-step-2.png',
-  '/mobile-app/mobile-app-step-3.png',
+import { posesSelfie } from '@/lib/poses'
+
+const PHONE_LEFT_IMAGE = '/poses-v2/selfie-input/bathroom-bright.jpg'
+const PHONE_RIGHT_IMAGE = posesSelfie[0].src
+
+const trustPills = [
+  {
+    label: 'Real AI photos',
+    icon: (
+      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Realistic',
+    icon: (
+      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2" />
+      </svg>
+    ),
+  },
+  {
+    label: '300+ poses',
+    icon: (
+      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="3" y="3" width="7" height="7" rx="1.5" />
+        <rect x="14" y="3" width="7" height="7" rx="1.5" />
+        <rect x="3" y="14" width="7" height="7" rx="1.5" />
+        <rect x="14" y="14" width="7" height="7" rx="1.5" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Custom uploads',
+    icon: (
+      <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M12 3v12M7 8l5-5 5 5" />
+        <path d="M5 21h14" />
+      </svg>
+    ),
+  },
 ]
 
 export function Hero() {
-  const [currentStep, setCurrentStep] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStep((prev) => (prev + 1) % STEPS.length)
-    }, 2500)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-linear-to-b from-primary/5 via-transparent to-transparent" />
+    <section className="relative px-4 pt-24 lg:pt-28 pb-12 lg:pb-20 overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-[radial-gradient(circle,rgba(245,158,11,0.08),transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="text-center lg:text-left animate-fade-in">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-              Transform any selfie into a{' '}
-              <span className="gradient-text">Pro Photo</span>
+      <div className="relative max-w-md lg:max-w-5xl mx-auto">
+        <div className="flex flex-col items-center lg:grid lg:grid-cols-2 lg:gap-10 lg:items-center">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-md lg:max-w-none lg:order-1 order-2">
+            <span className="inline-flex pill-gradient pill-gradient-upper pill-gradient-button mb-5 lg:mb-6">
+              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+              </svg>
+              iOS · AI photo studio
+            </span>
+
+            <h1 className="font-serif text-white text-[34px] sm:text-[40px] lg:text-[56px] xl:text-[60px] leading-[1.05] font-semibold tracking-tight mb-3 lg:mb-5">
+              She decided in <em className="gradient-text not-italic">100&nbsp;ms</em>.
             </h1>
 
-            <p className="text-base sm:text-xl text-muted mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
-              Choose from 500+ poses for men and women. AI-powered but realistic results from just one selfie. Generated photos are saved locally on your device.
+            <p className="text-white/80 text-[15px] sm:text-base lg:text-[17px] leading-relaxed mb-7 lg:mb-9 max-w-xs lg:max-w-md">
+              Before she even read your name. Pick from 300+ pro poses — or upload your
+              own reference. AI does the rest.
             </p>
 
-            <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
-              <a
-                href="https://apps.apple.com/us/app/winkypie/id6757441777"
-                onClick={() => trackDownloadClick('hero_button')}
-                aria-label="Download WinkyPie on the App Store"
-                className="inline-flex items-center justify-center gap-2 bg-white text-black px-4 py-2 rounded-xl border border-gray-200 shadow-lg hover:shadow-xl hover:scale-105 transition-all"
-              >
-                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                </svg>
-                <div className="text-left">
-                  <div className="text-xs opacity-60">Download on the</div>
-                  <div className="text-xl font-semibold leading-tight">App Store</div>
-                </div>
-              </a>
-            </div>
+            <div className="flex flex-col items-center lg:items-start gap-5">
+              <AppStoreBadge trackingLabel="hero_badge" size="md" variant="light" />
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
-              <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full text-sm font-medium">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                100% Private
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full text-sm font-medium">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Realistic Results
-              </span>
-              <span className="inline-flex items-center gap-1.5 bg-primary/10 text-primary border border-primary/20 px-3 py-1.5 rounded-full text-sm font-medium">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Free to Try
-              </span>
-            </div>
-          </div>
-
-          <div className="relative flex justify-center animate-fade-in">
-            <div className="phone-mockup">
-              <div className="phone-button-right" style={{ top: '8rem', height: '3rem' }} />
-              <div className="phone-button-left" style={{ top: '5.5rem', height: '1.5rem' }} />
-              <div className="phone-button-left" style={{ top: '8rem', height: '2.5rem' }} />
-              <div className="phone-button-left" style={{ top: '11rem', height: '2.5rem' }} />
-              <div className="phone-screen w-55 h-[28rem] sm:w-70 sm:h-[36rem] relative">
-                {STEPS.map((src, index) => (
-                  <Image
-                    key={src}
-                    src={src}
-                    alt={`Step ${index + 1}`}
-                    fill
-                    className={`object-contain transition-opacity duration-700 ${
-                      index === currentStep ? 'opacity-100' : 'opacity-0'
-                    }`}
-                    priority={index === 0}
-                  />
+              <div className="flex flex-wrap justify-center lg:justify-start gap-1.5">
+                {trustPills.map((pill) => (
+                  <span
+                    key={pill.label}
+                    className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium text-white/85 border border-white/12 bg-white/[0.04] backdrop-blur-sm"
+                  >
+                    <span className="text-[color:var(--brand-cta)]">{pill.icon}</span>
+                    {pill.label}
+                  </span>
                 ))}
               </div>
             </div>
+          </div>
 
+          <div className="relative flex justify-center items-center mb-12 lg:mb-0 order-1 lg:order-2">
+            <div className="relative flex justify-center">
+              <PhoneMockup
+                src={PHONE_LEFT_IMAGE}
+                alt="Selfie input example"
+                className="relative -rotate-[8deg] translate-y-4 lg:translate-y-6 z-10"
+                priority
+              />
+              <PhoneMockup
+                src={PHONE_RIGHT_IMAGE}
+                alt="AI-generated pro photo example"
+                className="relative rotate-[8deg] -translate-y-4 lg:-translate-y-6 -ml-10 sm:-ml-12 lg:-ml-14"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
+  )
+}
+
+function PhoneMockup({
+  src,
+  alt,
+  className = '',
+  priority = false,
+}: {
+  src: string
+  alt: string
+  className?: string
+  priority?: boolean
+}) {
+  return (
+    <div className={className}>
+      <div className="phone-mockup">
+        <div className="phone-screen w-[150px] h-[315px] sm:w-[170px] sm:h-[358px] lg:w-[200px] lg:h-[420px] relative">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes="(max-width: 640px) 150px, (max-width: 1024px) 170px, 200px"
+            className="object-cover"
+            priority={priority}
+          />
+        </div>
+      </div>
+    </div>
   )
 }

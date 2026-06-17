@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto legal-content">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Privacy Policy for WinkyPie</h1>
-          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: March 15, 2026</p>
+          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: June 17, 2026</p>
 
           <p>This Privacy Policy for WinkyPie by Minimax Development (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) explains how we collect, store, use, and share information (&quot;process&quot;) when you engage with our services (&quot;Services&quot;) in relation to the WinkyPie mobile application (&quot;Application&quot;). This includes instances when you:</p>
 
@@ -589,7 +589,7 @@ export default function PrivacyPage() {
 
           <p>The &quot;Last updated&quot; date at the top of this Privacy Policy indicates when the most recent revisions were made.</p>
 
-          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of March 15, 2026.</p>
+          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of June 17, 2026.</p>
 
           <div className="text-center pt-6 border-t border-border mt-12">
             <Link href="/" className="text-primary hover:underline">

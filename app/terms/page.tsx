@@ -16,8 +16,8 @@ export default function TermsPage() {
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto legal-content">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Terms and Conditions for WinkyPie</h1>
-          <p className="text-sm text-muted mb-1"><strong>Last Updated:</strong> March 15, 2026</p>
-          <p className="text-sm text-muted mb-8 pb-6 border-b border-border"><strong>Effective Date:</strong> March 15, 2026</p>
+          <p className="text-sm text-muted mb-1"><strong>Last Updated:</strong> June 17, 2026</p>
+          <p className="text-sm text-muted mb-8 pb-6 border-b border-border"><strong>Effective Date:</strong> June 17, 2026</p>
 
           <p>Welcome to WinkyPie. These Terms and Conditions (&quot;Terms,&quot; &quot;Agreement&quot;) constitute a legally binding agreement between you (&quot;User,&quot; &quot;you,&quot; or &quot;your&quot;) and WinkyPie by Minimax Development (&quot;WinkyPie,&quot; &quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) governing your access to and use of the WinkyPie mobile application (&quot;App,&quot; &quot;Application&quot;) and all related services (&quot;Services&quot;).</p>
 
@@ -1390,7 +1390,7 @@ export default function TermsPage() {
 
           <hr />
 
-          <p className="mt-10 pt-6 border-t border-border italic text-muted">These Terms and Conditions are effective as of March 15, 2026.</p>
+          <p className="mt-10 pt-6 border-t border-border italic text-muted">These Terms and Conditions are effective as of June 17, 2026.</p>
           <p><em>WinkyPie by Minimax Development</em></p>
           <p><strong>Version:</strong> 01.2026<br />
           <strong>Document ID:</strong> terms_v_01.2026</p>
