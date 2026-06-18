@@ -89,17 +89,28 @@ export function Hero() {
           </div>
 
           <div className="relative flex justify-center items-center mb-12 lg:mb-0 order-1 lg:order-2">
+            <div
+              aria-hidden="true"
+              className="absolute inset-0 -z-10 m-auto h-[80%] w-[80%] rounded-full hero-glow"
+              style={{
+                background:
+                  'radial-gradient(circle, rgba(245,158,11,0.25) 0%, rgba(236,72,153,0.18) 40%, transparent 75%)',
+              }}
+            />
+
             <div className="relative flex justify-center">
               <PhoneMockup
                 src={PHONE_LEFT_IMAGE}
                 alt="Selfie input example"
-                className="relative -rotate-[8deg] translate-y-4 lg:translate-y-6 z-10"
+                className="hero-phone-left z-10"
+                imageClassName="hero-phone-image"
                 priority
               />
               <PhoneMockup
                 src={PHONE_RIGHT_IMAGE}
                 alt="AI-generated pro photo example"
-                className="relative rotate-[8deg] -translate-y-4 lg:-translate-y-6 -ml-10 sm:-ml-12 lg:-ml-14"
+                className="hero-phone-right -ml-10 sm:-ml-12 lg:-ml-14"
+                imageClassName="hero-phone-image hero-phone-image-delay"
               />
             </div>
           </div>
@@ -113,11 +124,13 @@ function PhoneMockup({
   src,
   alt,
   className = '',
+  imageClassName = '',
   priority = false,
 }: {
   src: string
   alt: string
   className?: string
+  imageClassName?: string
   priority?: boolean
 }) {
   return (
@@ -129,7 +142,7 @@ function PhoneMockup({
             alt={alt}
             fill
             sizes="(max-width: 640px) 150px, (max-width: 1024px) 170px, 200px"
-            className="object-cover"
+            className={`object-cover ${imageClassName}`}
             priority={priority}
           />
         </div>

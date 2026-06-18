@@ -355,6 +355,69 @@ body {
   100% { transform: translateX(0); }
 }
 
+.hero-phone-left {
+  animation: hero-phone-float-left 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-phone-right {
+  animation: hero-phone-float-right 6s ease-in-out infinite;
+  animation-delay: -3s;
+  will-change: transform;
+}
+
+@keyframes hero-phone-float-left {
+  0%, 100% {
+    transform: rotate(-8deg) translateY(22px);
+  }
+  50% {
+    transform: rotate(-8deg) translateY(2px);
+  }
+}
+
+@keyframes hero-phone-float-right {
+  0%, 100% {
+    transform: rotate(8deg) translateY(-22px);
+  }
+  50% {
+    transform: rotate(8deg) translateY(-2px);
+  }
+}
+
+.hero-phone-image {
+  animation: hero-ken-burns 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero-phone-image-delay {
+  animation-delay: -7s;
+}
+
+@keyframes hero-ken-burns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  100% {
+    transform: scale(1.1) translate(-3%, 2%);
+  }
+}
+
+.hero-glow {
+  animation: hero-glow-pulse 5s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+@keyframes hero-glow-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
 .pulse-outline {
   position: relative;
 }
@@ -383,10 +446,24 @@ body {
 
   .animate-scroll-left,
   .animate-scroll-right,
+  .animate-scroll-slow-left,
+  .animate-scroll-slow-right,
   .pulse-outline::after,
   .pulse-cta-border,
-  .pulse-cta-sheen {
+  .pulse-cta-sheen,
+  .hero-phone-left,
+  .hero-phone-right,
+  .hero-phone-image,
+  .hero-glow {
     animation: none;
+  }
+
+  .hero-phone-left {
+    transform: rotate(-8deg) translateY(16px);
+  }
+
+  .hero-phone-right {
+    transform: rotate(8deg) translateY(-16px);
   }
 
   .pulse-cta {

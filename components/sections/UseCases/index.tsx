@@ -5,6 +5,7 @@ const platforms = [
   { name: 'Hinge', initials: 'H' },
   { name: 'Bumble', initials: 'B' },
   { name: 'Raya', initials: 'R' },
+  { name: 'Instagram', initials: 'IG' },
   { name: 'LinkedIn', initials: 'in' },
   { name: 'Travel', initials: '✈' },
 ]
