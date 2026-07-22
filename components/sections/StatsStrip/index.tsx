@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
 
 const stats = [
@@ -70,15 +68,6 @@ export function StatsStrip() {
             </AnimateOnScroll>
           ))}
         </ul>
-
-        <p className="mt-6 lg:mt-10 text-center">
-          <Link
-            href="/methodology"
-            className="text-[12px] lg:text-[13px] italic text-white/55 underline hover:text-white/80 transition-colors"
-          >
-            Sources &amp; methodology
-          </Link>
-        </p>
       </div>
     </section>
   )

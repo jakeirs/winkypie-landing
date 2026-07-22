@@ -5,7 +5,6 @@ const legalLinks = [
   { href: '/privacy', label: 'Privacy Policy' },
   { href: '/terms', label: 'Terms of Service' },
   { href: '/privacy#ai-data-usage', label: 'AI Data Usage' },
-  { href: '/methodology', label: 'Methodology' },
   { href: '/support', label: 'Support' },
 ]
 
@@ -40,7 +39,9 @@ export default function Footer() {
               <span className="text-lg font-semibold tracking-tight">WinkyPie</span>
             </Link>
             <p className="text-white/65 text-[13px] lg:text-[14px] leading-relaxed max-w-sm">
-              <span className="font-serif text-white">Pro photos. No photographer.</span>
+              <span className="font-serif text-white text-[17px] lg:text-[19px] font-semibold">
+                Pro photos. <em className="gradient-text">No photographer.</em>
+              </span>
               <br />
               One selfie. 300+ pro poses or your own reference. AI does the rest.
             </p>

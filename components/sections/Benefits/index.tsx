@@ -83,8 +83,9 @@ export function Benefits() {
               <em className="gradient-text">Nothing you don&apos;t.</em>
             </h2>
             <p className="text-[13px] lg:text-[15px] text-white/75 max-w-xs lg:max-w-xl mx-auto leading-snug">
-              The smarter way to pro photos — engineered for the dating-app rules that
-              actually move the needle.
+              Pick from 300+ curated poses, upload a custom reference you love, and let AI
+              handle the rest — engineered for the dating-app rules that actually move the
+              needle.
             </p>
           </div>
         </AnimateOnScroll>

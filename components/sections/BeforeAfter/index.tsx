@@ -54,10 +54,6 @@ export function BeforeAfter() {
           </div>
         </AnimateOnScroll>
 
-        <p className="mt-4 lg:mt-5 text-center text-[10px] italic text-white/45 leading-relaxed px-2 max-w-md lg:max-w-xl mx-auto">
-          Demo. Your photos use your actual face and body. Results vary with selfie quality, lighting, and pose.
-        </p>
-
         <div className="mt-6 lg:mt-8 flex justify-center">
           <CtaButton label="Start free trial" trackingLabel="before_after_cta" />
         </div>

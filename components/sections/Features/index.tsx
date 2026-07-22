@@ -14,13 +14,13 @@ import {
 } from '@/lib/poses'
 
 const marketingCategories = [
-  'Tinder Hero',
-  'Date Night',
-  'Business',
-  'Casual',
-  'Outdoor',
-  'Golden hour',
-  'Custom uploads',
+  '#tinderhero',
+  '#datenight',
+  '#careerpro',
+  '#travelvibes',
+  '#casual',
+  '#confident',
+  '#custom',
 ]
 
 const galleryRowAv2 = posesAll.slice(0, 34)
@@ -28,12 +28,16 @@ const galleryRowBv2 = posesAll.slice(34, 68)
 const galleryRowCv2 = posesAll.slice(68)
 
 const heroRotation = [
-  posesPose[0],
-  posesMediumShot[0],
+  posesMediumShot[17],
   posesBusiness[0],
-  posesPose[5],
-  posesMediumShot[7],
-  posesSitting[3],
+  posesBusiness[1],
+  posesBusiness[8],
+  posesBusiness[11],
+  posesMediumShot[13],
+  posesPose[2],
+  posesPose[14],
+  posesPose[15],
+  posesSitting[18],
 ]
 
 const miniPoses = [
@@ -78,9 +82,9 @@ export function Features() {
           </div>
         </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-3 lg:gap-4">
           <AnimateOnScroll animation="fade-up" className="lg:row-span-2">
-            <div className="group relative h-full rounded-3xl overflow-hidden bg-card border border-white/10 hover:border-white/20 transition-all min-h-[360px] lg:min-h-[520px]">
+            <div className="group relative h-full rounded-3xl overflow-hidden bg-card border border-white/10 hover:border-white/20 transition-all min-h-[300px] lg:min-h-[420px]">
               <div className="absolute inset-0">
                 {heroRotation.map((img, i) => (
                   <Image
@@ -89,47 +93,33 @@ export function Features() {
                     alt="AI-generated pro photo example"
                     fill
                     className={`object-cover transition-opacity duration-1000 ${
-                      i === heroIndex ? 'opacity-55' : 'opacity-0'
+                      i === heroIndex ? 'opacity-100' : 'opacity-0'
                     }`}
                     priority={i === 0}
-                    sizes="(max-width: 1024px) 100vw, 560px"
+                    quality={92}
+                    sizes="(max-width: 1024px) 100vw, 480px"
                   />
                 ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
               </div>
-              <div className="relative h-full flex flex-col justify-end p-6 lg:p-8">
+              <div className="relative h-full flex flex-col justify-end p-5 lg:p-6">
                 <span className="pill-gradient pill-gradient-upper self-start mb-4">
                   The output
                 </span>
-                <h3 className="font-serif text-white text-[22px] lg:text-[28px] font-semibold tracking-tight mb-2 leading-tight">
+                <h3 className="font-serif text-white text-[20px] lg:text-[24px] font-semibold tracking-tight mb-1.5 leading-tight">
                   Looks pro. <em className="gradient-text">Still you.</em>
                 </h3>
-                <p className="text-white/80 text-[13px] lg:text-[14px] max-w-sm leading-relaxed">
+                <p className="text-white/80 text-[12px] lg:text-[13px] max-w-sm leading-relaxed">
                   Real photo — not a filter. The AI preserves what you actually look
                   like and renders you in the pose you picked.
                 </p>
-                <div className="flex gap-1.5 mt-4">
-                  {heroRotation.map((_, i) => (
-                    <button
-                      key={i}
-                      type="button"
-                      onClick={() => setHeroIndex(i)}
-                      aria-label={`Show photo ${i + 1}`}
-                      className={`h-1 rounded-full transition-all duration-500 ${
-                        i === heroIndex
-                          ? 'w-6 bg-[color:var(--brand-cta)]'
-                          : 'w-2 bg-white/30 hover:bg-white/50'
-                      }`}
-                    />
-                  ))}
-                </div>
               </div>
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={100}>
-            <div className="group rounded-3xl bg-card border border-white/10 hover:border-white/20 transition-all p-6 lg:p-7">
-              <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] mb-5">
+            <div className="group rounded-3xl bg-card border border-white/10 hover:border-white/20 transition-all p-5 lg:p-5">
+              <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] mb-4">
                 <div className="flex gap-1.5 animate-scroll-left w-max">
                   {[...miniPoses, ...miniPoses].map((img, i) => (
                     <div
@@ -141,16 +131,17 @@ export function Features() {
                         alt="Pose thumbnail"
                         fill
                         className="object-cover"
-                        sizes="72px"
+                        quality={90}
+                        sizes="(max-width: 640px) 128px, 144px"
                       />
                     </div>
                   ))}
                 </div>
               </div>
-              <h3 className="font-serif text-white text-[18px] lg:text-[20px] font-semibold tracking-tight mb-1">
+              <h3 className="font-serif text-white text-[17px] lg:text-[18px] font-semibold tracking-tight mb-1">
                 <em className="gradient-text">300+</em> pro poses
               </h3>
-              <p className="text-white/75 text-[13px] lg:text-[14px] leading-relaxed">
+              <p className="text-white/75 text-[12px] lg:text-[13px] leading-relaxed">
                 Tinder Hero, Date Night, Business, Casual, Outdoor — curated for every
                 situation that matters. Plus custom poses (upload your own).
               </p>
@@ -198,9 +189,12 @@ export function Features() {
           </AnimateOnScroll>
 
           <AnimateOnScroll delay={120}>
-            <div className="flex flex-wrap justify-center gap-2 mb-6 lg:mb-8">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-1.5 mb-6 lg:mb-8">
               {marketingCategories.map((cat) => (
-                <span key={cat} className="pill-gradient pill-gradient-upper">
+                <span
+                  key={cat}
+                  className="text-[13px] lg:text-[14px] font-semibold tracking-tight text-[#fbbf24] whitespace-nowrap"
+                >
                   {cat}
                 </span>
               ))}
@@ -230,14 +224,14 @@ function SmallCard({
   body: string
 }) {
   return (
-    <div className="group h-full rounded-3xl bg-card border border-white/10 hover:border-white/20 transition-all p-5 lg:p-6 flex flex-col">
-      <div className="w-10 h-10 lg:w-11 lg:h-11 rounded-xl bg-gradient-to-br from-[color:var(--brand-cta)] to-[color:var(--brand-cta-secondary)] flex items-center justify-center text-white mb-4 lg:mb-5 shadow-lg shadow-[color:var(--brand-cta-secondary)]/20">
+    <div className="group h-full rounded-3xl bg-card border border-white/10 hover:border-white/20 transition-all p-4 lg:p-5 flex flex-col">
+      <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-xl bg-gradient-to-br from-[color:var(--brand-cta)] to-[color:var(--brand-cta-secondary)] flex items-center justify-center text-white mb-3 lg:mb-4 shadow-lg shadow-[color:var(--brand-cta-secondary)]/20">
         {icon}
       </div>
-      <h4 className="font-serif text-white text-[16px] lg:text-[18px] font-semibold mb-1 leading-snug">
+      <h4 className="font-serif text-white text-[15px] lg:text-[17px] font-semibold mb-1 leading-snug">
         {title}
       </h4>
-      <p className="text-white/70 text-[12px] lg:text-[13px] leading-relaxed">{body}</p>
+      <p className="text-white/70 text-[11px] lg:text-[12px] leading-relaxed">{body}</p>
     </div>
   )
 }

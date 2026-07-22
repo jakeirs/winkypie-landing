@@ -1,11 +1,26 @@
+'use client'
+
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 import AppStoreBadge from '@/components/ui/AppStoreBadge/AppStoreBadge'
 
-import { posesSelfie } from '@/lib/poses'
+import { posesMediumShot, posesSelfie } from '@/lib/poses'
 
-const PHONE_LEFT_IMAGE = '/poses-v2/selfie-input/bathroom-bright.jpg'
-const PHONE_RIGHT_IMAGE = posesSelfie[0].src
+const phonePairs = [
+  {
+    selfie: '/poses-v2/selfie-input/bathroom-bright.jpg',
+    generated: posesSelfie[0].src,
+  },
+  {
+    selfie: '/poses-v2/selfie-input/bathroom-athletic.jpg',
+    generated: posesMediumShot[17].src,
+  },
+  {
+    selfie: '/poses-v2/selfie-input/elevator-mirror.jpg',
+    generated: posesMediumShot[0].src,
+  },
+]
 
 const trustPills = [
   {
@@ -48,6 +63,15 @@ const trustPills = [
 ]
 
 export function Hero() {
+  const [pairIndex, setPairIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPairIndex((prev) => (prev + 1) % phonePairs.length)
+    }, 3500)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="relative px-4 pt-24 lg:pt-28 pb-12 lg:pb-20 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-[radial-gradient(circle,rgba(245,158,11,0.08),transparent_70%)] pointer-events-none" />
@@ -100,14 +124,16 @@ export function Hero() {
 
             <div className="relative flex justify-center">
               <PhoneMockup
-                src={PHONE_LEFT_IMAGE}
+                pairs={phonePairs.map((p) => p.selfie)}
+                activeIndex={pairIndex}
                 alt="Selfie input example"
                 className="hero-phone-left z-10"
                 imageClassName="hero-phone-image"
                 priority
               />
               <PhoneMockup
-                src={PHONE_RIGHT_IMAGE}
+                pairs={phonePairs.map((p) => p.generated)}
+                activeIndex={pairIndex}
                 alt="AI-generated pro photo example"
                 className="hero-phone-right -ml-10 sm:-ml-12 lg:-ml-14"
                 imageClassName="hero-phone-image hero-phone-image-delay"
@@ -121,13 +147,15 @@ export function Hero() {
 }
 
 function PhoneMockup({
-  src,
+  pairs,
+  activeIndex,
   alt,
   className = '',
   imageClassName = '',
   priority = false,
 }: {
-  src: string
+  pairs: string[]
+  activeIndex: number
   alt: string
   className?: string
   imageClassName?: string
@@ -136,15 +164,20 @@ function PhoneMockup({
   return (
     <div className={className}>
       <div className="phone-mockup">
-        <div className="phone-screen w-[150px] h-[315px] sm:w-[170px] sm:h-[358px] lg:w-[200px] lg:h-[420px] relative">
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            sizes="(max-width: 640px) 150px, (max-width: 1024px) 170px, 200px"
-            className={`object-cover ${imageClassName}`}
-            priority={priority}
-          />
+        <div className="phone-screen w-[150px] h-[315px] sm:w-[170px] sm:h-[358px] lg:w-[200px] lg:h-[420px] relative overflow-hidden">
+          {pairs.map((src, i) => (
+            <Image
+              key={src}
+              src={src}
+              alt={alt}
+              fill
+              sizes="(max-width: 640px) 150px, (max-width: 1024px) 170px, 200px"
+              className={`object-cover transition-opacity duration-700 ${
+                i === activeIndex ? 'opacity-100' : 'opacity-0'
+              } ${imageClassName}`}
+              priority={priority && i === 0}
+            />
+          ))}
         </div>
       </div>
     </div>
