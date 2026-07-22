@@ -5,7 +5,7 @@ export const faqs = [
   {
     question: 'How does the AI actually work?',
     answer:
-      'You upload one selfie and pick a pose from the library. The AI preserves your facial features and body proportions, then renders you in that pose with realistic lighting and styling. End-to-end takes ~30 seconds.',
+      'You upload one selfie and pick a pose from the library. The AI preserves your facial features and body proportions, then renders you in that pose with realistic lighting and styling.',
   },
   {
     question: 'How realistic do the photos look?',

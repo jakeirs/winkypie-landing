@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pro photos. No photographer.',
     description:
-      'One selfie. ~30 seconds. AI generates pro shots that match what dating apps actually reward. Your real face & body. 3 days free.',
+      'One selfie. AI generates pro shots that match what dating apps actually reward. Your real face & body. 3 days free.',
     type: 'website',
     locale: 'en_US',
     siteName: 'WinkyPie',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Pro photos. No photographer.',
     description:
-      'One selfie. ~30 seconds. AI photos that match what dating apps actually reward. 3 days free.',
+      'One selfie. AI photos that match what dating apps actually reward. 3 days free.',
   },
   manifest: '/site.webmanifest',
   appleWebApp: {

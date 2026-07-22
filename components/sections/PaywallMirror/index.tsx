@@ -15,7 +15,7 @@ export function PaywallMirror() {
                 </h2>
 
                 <p className="text-white/85 text-[15px] sm:text-[17px] lg:text-[18px] leading-relaxed max-w-2xl mx-auto mb-9">
-                  One selfie. ~30 seconds. Pick from our pro collection — or upload your own
+                  One selfie. Pick from our pro collection — or upload your own
                   reference. AI photos that match what dating apps actually reward.
                 </p>
 
