@@ -76,8 +76,8 @@ export function Features() {
               One selfie. <em className="gradient-text">Every angle.</em>
             </h2>
             <p className="text-[13px] lg:text-[15px] text-white/75 max-w-xs lg:max-w-xl mx-auto leading-snug">
-              Pick from 300+ pro poses — or upload your own reference. The AI keeps
-              your face and build.
+              Pick from our pro collection — or upload your own reference. The AI
+              keeps your face and build.
             </p>
           </div>
         </AnimateOnScroll>
@@ -139,7 +139,7 @@ export function Features() {
                 </div>
               </div>
               <h3 className="font-serif text-white text-[17px] lg:text-[18px] font-semibold tracking-tight mb-1">
-                <em className="gradient-text">300+</em> pro poses
+                Pro <em className="gradient-text">collection</em>
               </h3>
               <p className="text-white/75 text-[12px] lg:text-[13px] leading-relaxed">
                 Tinder Hero, Date Night, Business, Casual, Outdoor — curated for every
@@ -183,7 +183,7 @@ export function Features() {
                 Pick a <em className="gradient-text">vibe</em>.
               </h3>
               <p className="text-[13px] lg:text-[14px] text-white/70 max-w-xs lg:max-w-lg mx-auto">
-                300+ pro poses. Or upload your own reference.
+                Poses from our pro collection. Or upload your own reference.
               </p>
             </div>
           </AnimateOnScroll>

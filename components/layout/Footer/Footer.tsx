@@ -43,7 +43,7 @@ export default function Footer() {
                 Pro photos. <em className="gradient-text">No photographer.</em>
               </span>
               <br />
-              One selfie. 300+ pro poses or your own reference. AI does the rest.
+              One selfie. Pro poses from our collection or your own reference. AI does the rest.
             </p>
           </div>
 

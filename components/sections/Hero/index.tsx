@@ -41,7 +41,7 @@ const trustPills = [
     ),
   },
   {
-    label: '300+ poses',
+    label: 'Pro collection',
     icon: (
       <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3" y="3" width="7" height="7" rx="1.5" />
@@ -91,8 +91,8 @@ export function Hero() {
             </h1>
 
             <p className="text-white/80 text-[15px] sm:text-base lg:text-[17px] leading-relaxed mb-7 lg:mb-9 max-w-xs lg:max-w-md">
-              Before she even read your name. Pick from 300+ pro poses — or upload your
-              own reference. AI does the rest.
+              Before she even read your name. Pick from our pro collection — or upload
+              your own reference. AI does the rest.
             </p>
 
             <div className="flex flex-col items-center lg:items-start gap-5">

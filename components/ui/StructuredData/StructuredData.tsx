@@ -8,7 +8,7 @@ const mobileApplication = {
   operatingSystem: 'iOS',
   applicationCategory: 'PhotoApplication',
   description:
-    'AI-generated pro photos for dating profiles, built from one selfie. 300+ pro poses or upload your own.',
+    'AI-generated pro photos for dating profiles, built from one selfie. Pro poses from our collection or upload your own.',
   url: SITE_URL,
   downloadUrl: 'https://apps.apple.com/us/app/winkypie/id6757441777',
   offers: {

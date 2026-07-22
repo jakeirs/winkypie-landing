@@ -100,7 +100,7 @@ export default async function OgImage() {
             maxWidth: 800,
           }}
         >
-          One selfie. 300+ pro poses. AI does the rest.
+          One selfie. Pro poses from our collection. AI does the rest.
         </div>
 
         <div

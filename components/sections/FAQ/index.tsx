@@ -20,7 +20,7 @@ export const faqs = [
   {
     question: 'What if I don\'t like a result?',
     answer:
-      'Pick a different pose or retake the selfie. With 300+ pro poses across Selfie, Pose, Medium Shot, Sitting, and Business categories — or upload your own reference photo from anywhere — the right shot is usually a couple of tries away.',
+      'Pick a different pose or retake the selfie. With our pro collection spanning Selfie, Pose, Medium Shot, Sitting, and Business categories — or upload your own reference photo from anywhere — the right shot is usually a couple of tries away.',
   },
   {
     question: 'How does the trial and cancellation work?',

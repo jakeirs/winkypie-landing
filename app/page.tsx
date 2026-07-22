@@ -5,7 +5,6 @@ import { Hero } from '@/components/sections/Hero'
 import { StatsStrip } from '@/components/sections/StatsStrip'
 import { Features } from '@/components/sections/Features'
 import { HowItWorks } from '@/components/sections/HowItWorks'
-import { BeforeAfter } from '@/components/sections/BeforeAfter'
 import { Benefits } from '@/components/sections/Benefits'
 import { FAQ } from '@/components/sections/FAQ'
 import { PaywallMirror } from '@/components/sections/PaywallMirror'
@@ -19,7 +18,6 @@ export default function Home() {
         <StatsStrip />
         <Features />
         <HowItWorks />
-        <BeforeAfter />
         <Benefits />
         <FAQ />
         <PaywallMirror />

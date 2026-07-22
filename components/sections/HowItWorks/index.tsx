@@ -6,7 +6,7 @@ const steps = [
   {
     number: '1',
     title: 'Pick a pose',
-    body: '300+ pro poses across 5 categories — or upload your own reference photo.',
+    body: 'Pro poses from our collection across 5 categories — or upload your own reference photo.',
     image: '/mobile-app/mobile-app-step-1.png',
     imageAlt: 'WinkyPie pose library screen',
     tilt: '-rotate-3',

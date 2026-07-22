@@ -11,7 +11,7 @@ const benefits = [
     ),
   },
   {
-    title: '300+ pro poses',
+    title: 'Pro collection',
     body: 'Tinder Hero, Date Night, Business, Casual, Outdoor — curated for every situation that matters.',
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -23,12 +23,13 @@ const benefits = [
     ),
   },
   {
-    title: '~30 second generation',
-    body: 'Selfie in, pro photo out. End-to-end faster than writing an opener.',
+    title: 'Selfie quality check',
+    body: 'We analyze your selfie for quality, angle, and framing before generation — weak shots flagged, not sent. Fewer wasted attempts.',
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 7v5l3 2" />
+        <circle cx="11" cy="11" r="7" />
+        <path d="M8 11l2 2 4-4" />
+        <path d="M21 21l-4.35-4.35" />
       </svg>
     ),
   },
@@ -79,11 +80,10 @@ export function Benefits() {
               <span className="pill-gradient pill-gradient-upper">Why WinkyPie</span>
             </div>
             <h2 className="font-serif text-white text-[28px] sm:text-[32px] lg:text-[44px] leading-[1.1] font-semibold tracking-tight mb-3 lg:mb-4">
-              Everything you need.{' '}
-              <em className="gradient-text">Nothing you don&apos;t.</em>
+              Built to get <em className="gradient-text">picked</em>.
             </h2>
             <p className="text-[13px] lg:text-[15px] text-white/75 max-w-xs lg:max-w-xl mx-auto leading-snug">
-              Pick from 300+ curated poses, upload a custom reference you love, and let AI
+              Pick from our pro collection, upload a custom reference you love, and let AI
               handle the rest — engineered for the dating-app rules that actually move the
               needle.
             </p>
