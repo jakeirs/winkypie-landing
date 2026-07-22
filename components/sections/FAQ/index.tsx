@@ -36,7 +36,7 @@ export const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="px-4 py-14 lg:py-24">
+    <section id="faq" className="px-4 py-10 lg:py-16">
       <FaqStructuredData faqs={[...faqs]} />
       <div className="max-w-md lg:max-w-4xl mx-auto">
         <AnimateOnScroll>

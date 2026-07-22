@@ -5,20 +5,20 @@ import { useEffect, useState } from 'react'
 
 import AppStoreBadge from '@/components/ui/AppStoreBadge/AppStoreBadge'
 
-import { posesMediumShot, posesSelfie } from '@/lib/poses'
+import { posesAll } from '@/lib/poses'
 
 const phonePairs = [
   {
-    selfie: '/poses-v2/selfie-input/bathroom-bright.jpg',
-    generated: posesSelfie[0].src,
+    selfie: posesAll[2].src,
+    generated: posesAll[38].src,
   },
   {
-    selfie: '/poses-v2/selfie-input/bathroom-athletic.jpg',
-    generated: posesMediumShot[17].src,
+    selfie: posesAll[8].src,
+    generated: posesAll[52].src,
   },
   {
-    selfie: '/poses-v2/selfie-input/elevator-mirror.jpg',
-    generated: posesMediumShot[0].src,
+    selfie: posesAll[13].src,
+    generated: posesAll[73].src,
   },
 ]
 
@@ -73,7 +73,7 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative px-4 pt-24 lg:pt-28 pb-12 lg:pb-20 overflow-hidden">
+    <section className="relative px-4 pt-24 lg:pt-28 pb-8 lg:pb-14 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-[radial-gradient(circle,rgba(245,158,11,0.08),transparent_70%)] pointer-events-none" />
 
       <div className="relative max-w-md lg:max-w-5xl mx-auto">

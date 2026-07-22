@@ -28,16 +28,13 @@ const galleryRowBv2 = posesAll.slice(34, 68)
 const galleryRowCv2 = posesAll.slice(68)
 
 const heroRotation = [
-  posesMediumShot[17],
-  posesBusiness[0],
-  posesBusiness[1],
-  posesBusiness[8],
+  posesBusiness[3],
+  posesBusiness[6],
   posesBusiness[11],
-  posesMediumShot[13],
-  posesPose[2],
-  posesPose[14],
-  posesPose[15],
-  posesSitting[18],
+  posesMediumShot[0],
+  posesMediumShot[9],
+  posesMediumShot[17],
+  posesPose[7],
 ]
 
 const miniPoses = [
@@ -65,7 +62,7 @@ export function Features() {
   }, [])
 
   return (
-    <section id="features" className="px-4 py-14 lg:py-24 overflow-hidden">
+    <section id="features" className="px-4 py-10 lg:py-16 overflow-hidden">
       <div className="max-w-md lg:max-w-6xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-8 lg:mb-12">
@@ -84,7 +81,7 @@ export function Features() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] gap-3 lg:gap-4">
           <AnimateOnScroll animation="fade-up" className="lg:row-span-2">
-            <div className="group relative h-full rounded-3xl overflow-hidden bg-card border border-white/10 hover:border-white/20 transition-all min-h-[300px] lg:min-h-[420px]">
+            <div className="group relative h-full rounded-3xl overflow-hidden bg-card border border-white/10 hover:border-white/20 transition-all min-h-[380px] lg:min-h-[480px]">
               <div className="absolute inset-0">
                 {heroRotation.map((img, i) => (
                   <Image
@@ -92,15 +89,16 @@ export function Features() {
                     src={img.src}
                     alt="AI-generated pro photo example"
                     fill
-                    className={`object-cover transition-opacity duration-1000 ${
+                    className={`object-cover object-top transition-opacity duration-[1400ms] ${
                       i === heroIndex ? 'opacity-100' : 'opacity-0'
                     }`}
                     priority={i === 0}
-                    quality={92}
-                    sizes="(max-width: 1024px) 100vw, 480px"
+                    quality={100}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 520px"
                   />
                 ))}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 via-40% to-transparent to-70%" />
+                <div className="absolute inset-0 shadow-[inset_0_0_100px_20px_rgba(0,0,0,0.55)] pointer-events-none" />
               </div>
               <div className="relative h-full flex flex-col justify-end p-5 lg:p-6">
                 <span className="pill-gradient pill-gradient-upper self-start mb-4">
@@ -117,14 +115,14 @@ export function Features() {
             </div>
           </AnimateOnScroll>
 
-          <AnimateOnScroll animation="fade-up" delay={100}>
-            <div className="group rounded-3xl bg-card border border-white/10 hover:border-white/20 transition-all p-5 lg:p-5">
-              <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] mb-4">
-                <div className="flex gap-1.5 animate-scroll-left w-max">
+          <AnimateOnScroll animation="fade-up" delay={100} className="h-full">
+            <div className="group h-full flex flex-col rounded-3xl bg-card border border-white/10 hover:border-white/20 transition-all p-5 lg:p-6">
+              <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_6%,black_94%,transparent)] mb-4 lg:mb-5">
+                <div className="flex gap-1.5 lg:gap-2 animate-scroll-left w-max">
                   {[...miniPoses, ...miniPoses].map((img, i) => (
                     <div
                       key={i}
-                      className="relative w-[64px] h-[88px] sm:w-[72px] sm:h-[100px] shrink-0 rounded-lg overflow-hidden"
+                      className="relative w-[64px] h-[88px] sm:w-[76px] sm:h-[104px] lg:w-[92px] lg:h-[128px] shrink-0 rounded-lg overflow-hidden"
                     >
                       <Image
                         src={img.src}
@@ -132,24 +130,24 @@ export function Features() {
                         fill
                         className="object-cover"
                         quality={90}
-                        sizes="(max-width: 640px) 128px, 144px"
+                        sizes="(max-width: 640px) 128px, 184px"
                       />
                     </div>
                   ))}
                 </div>
               </div>
-              <h3 className="font-serif text-white text-[17px] lg:text-[18px] font-semibold tracking-tight mb-1">
+              <h3 className="font-serif text-white text-[17px] lg:text-[22px] font-semibold tracking-tight mb-1.5 lg:mb-2">
                 Pro <em className="gradient-text">collection</em>
               </h3>
-              <p className="text-white/75 text-[12px] lg:text-[13px] leading-relaxed">
+              <p className="text-white/75 text-[12px] lg:text-[14px] leading-relaxed">
                 Tinder Hero, Date Night, Business, Casual, Outdoor — curated for every
                 situation that matters. Plus custom poses (upload your own).
               </p>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-2 gap-3 lg:gap-4">
-            <AnimateOnScroll animation="fade-up" delay={160}>
+          <div className="grid grid-cols-2 gap-3 lg:gap-4 h-full">
+            <AnimateOnScroll animation="fade-up" delay={160} className="h-full">
               <SmallCard
                 icon={
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -161,7 +159,7 @@ export function Features() {
                 body="Photoreal AI output — your real face and build preserved. Not a filter, not a cartoon."
               />
             </AnimateOnScroll>
-            <AnimateOnScroll animation="fade-up" delay={220}>
+            <AnimateOnScroll animation="fade-up" delay={220} className="h-full">
               <SmallCard
                 icon={
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

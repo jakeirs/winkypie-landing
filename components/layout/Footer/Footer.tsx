@@ -87,7 +87,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/[0.08] mt-10 lg:mt-12 pt-6 text-center text-white/45 text-[12px]">
-          &copy; {currentYear} WinkyPie · Minimax Development. All rights reserved.
+          &copy; {currentYear} WinkyPie. All rights reserved.
         </div>
       </div>
     </footer>

@@ -3,6 +3,7 @@ import Footer from '@/components/layout/Footer/Footer'
 
 import { Hero } from '@/components/sections/Hero'
 import { StatsStrip } from '@/components/sections/StatsStrip'
+import { SwipeStack } from '@/components/sections/SwipeStack'
 import { Features } from '@/components/sections/Features'
 import { HowItWorks } from '@/components/sections/HowItWorks'
 import { Benefits } from '@/components/sections/Benefits'
@@ -16,6 +17,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <StatsStrip />
+        <SwipeStack />
         <Features />
         <HowItWorks />
         <Benefits />

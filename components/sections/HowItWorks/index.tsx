@@ -31,7 +31,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how" className="py-14 lg:py-24 overflow-hidden">
+    <section id="how" className="py-10 lg:py-16 overflow-hidden">
       <div className="max-w-md lg:max-w-6xl mx-auto px-4 lg:px-8">
         <AnimateOnScroll>
           <div className="text-center mb-12 lg:mb-16">
@@ -114,14 +114,6 @@ export function HowItWorks() {
             </AnimateOnScroll>
           ))}
         </div>
-
-        <p className="mt-12 lg:mt-16 text-center text-[12px] lg:text-[13px] text-white/55 italic leading-snug">
-          Average time end-to-end: ~30 seconds.*
-          <br />
-          <span className="not-italic text-[10px] lg:text-[11px] text-white/40">
-            *Actual time varies with server load and network conditions.
-          </span>
-        </p>
       </div>
     </section>
   )

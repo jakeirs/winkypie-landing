@@ -192,7 +192,7 @@ export default function TermsPage() {
           </ul>
 
           <h3>5.4 Account Deletion</h3>
-          <p>You may delete your account at any time through Settings &gt; Delete Account within the App. Upon deletion:</p>
+          <p>You may delete your account at any time through Settings &gt; <span className="gradient-text font-semibold">Delete Account</span> within the App. Upon deletion:</p>
           <ul>
             <li>All locally stored images will be permanently deleted from your device</li>
             <li>Your subscription data and Winky Shots balance will be removed from our systems</li>
@@ -522,7 +522,7 @@ export default function TermsPage() {
           <p>You may withdraw your consent to biometric data collection at any time by:</p>
           <ul>
             <li>Discontinuing use of the AI image generation features</li>
-            <li>Deleting your account through Settings &gt; Delete Account</li>
+            <li>Deleting your account through Settings &gt; <span className="gradient-text font-semibold">Delete Account</span></li>
             <li>Contacting us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></li>
           </ul>
           <p>Withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal.</p>
@@ -992,7 +992,7 @@ export default function TermsPage() {
           <h3>20.2 Termination by You</h3>
           <p>You may terminate your account at any time by:</p>
           <ul>
-            <li>Deleting your account through Settings &gt; Delete Account</li>
+            <li>Deleting your account through Settings &gt; <span className="gradient-text font-semibold">Delete Account</span></li>
             <li>Uninstalling the App from your device</li>
             <li>Contacting us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a></li>
           </ul>

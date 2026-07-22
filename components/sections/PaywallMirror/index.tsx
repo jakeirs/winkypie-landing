@@ -3,7 +3,7 @@ import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
 
 export function PaywallMirror() {
   return (
-    <section id="download" className="px-4 py-14 lg:py-24">
+    <section id="download" className="px-4 py-10 lg:py-16">
       <div className="max-w-4xl mx-auto">
         <AnimateOnScroll animation="scale-in">
           <div className="animated-border-card shadow-2xl">

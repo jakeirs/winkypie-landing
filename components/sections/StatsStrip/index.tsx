@@ -10,7 +10,7 @@ const stats = [
 
 export function StatsStrip() {
   return (
-    <section id="stats" className="px-4 py-14 lg:py-24">
+    <section id="stats" className="px-4 py-10 lg:py-16">
       <div className="max-w-md lg:max-w-6xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-8 lg:mb-14">

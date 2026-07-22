@@ -70,7 +70,7 @@ export function Benefits() {
   const right = benefits.slice(3)
 
   return (
-    <section className="relative px-4 py-14 lg:py-24 overflow-hidden">
+    <section className="relative px-4 py-10 lg:py-16 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-[radial-gradient(circle,rgba(245,158,11,0.05),transparent_70%)] pointer-events-none" />
 
       <div className="relative max-w-md lg:max-w-5xl mx-auto">
