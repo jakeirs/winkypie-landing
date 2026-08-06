@@ -2,12 +2,22 @@ import Image from 'next/image'
 
 import AnimateOnScroll from '@/components/ui/AnimateOnScroll/AnimateOnScroll'
 
-const steps = [
+type Step = {
+  number: string
+  title: string
+  body: string
+  imageAlt: string
+  tilt: string
+  image?: string
+  video?: { webm: string; mp4: string; poster: string }
+}
+
+const steps: Step[] = [
   {
     number: '1',
     title: 'Pick a pose',
     body: 'Pro poses from our collection — or upload your own reference photo.',
-    image: '/mobile-app/mobile-app-step-1.png',
+    image: '/mobile-app/step_1.png',
     imageAlt: 'WinkyPie pose library screen',
     tilt: '-rotate-3',
   },
@@ -15,7 +25,11 @@ const steps = [
     number: '2',
     title: 'Mirror your selfie',
     body: 'Quick shot matching the angle. We check quality before generating.',
-    image: '/mobile-app/mobile-app-step-2.png',
+    video: {
+      webm: '/mobile-app/video_1.webm',
+      mp4: '/mobile-app/video_1.mp4',
+      poster: '/mobile-app/video_1-poster.webp',
+    },
     imageAlt: 'WinkyPie selfie capture screen',
     tilt: 'rotate-0',
   },
@@ -23,7 +37,7 @@ const steps = [
     number: '3',
     title: 'Get your AI photo',
     body: 'Your face. Your build. Real photo — not a filter.',
-    image: '/mobile-app/mobile-app-step-3.png',
+    image: '/mobile-app/step_3.png',
     imageAlt: 'WinkyPie generated photo screen',
     tilt: 'rotate-3',
   },
@@ -85,14 +99,30 @@ export function HowItWorks() {
                       className="phone-button-left"
                       style={{ top: '8.75rem', height: '2rem' }}
                     />
-                    <div className="phone-screen w-[180px] h-[360px] sm:w-[200px] sm:h-[400px] lg:w-[220px] lg:h-[440px] relative">
-                      <Image
-                        src={step.image}
-                        alt={step.imageAlt}
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 1024px) 200px, 220px"
-                      />
+                    <div className="phone-screen w-[180px] sm:w-[200px] lg:w-[220px] aspect-[1206/2622] relative">
+                      {step.video ? (
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          preload="none"
+                          poster={step.video.poster}
+                          aria-label={step.imageAlt}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        >
+                          <source src={step.video.webm} type="video/webm" />
+                          <source src={step.video.mp4} type="video/mp4" />
+                        </video>
+                      ) : (
+                        <Image
+                          src={step.image!}
+                          alt={step.imageAlt}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 1024px) 200px, 220px"
+                        />
+                      )}
                     </div>
                   </div>
                 </div>
