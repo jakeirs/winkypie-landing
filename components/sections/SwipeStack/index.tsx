@@ -18,16 +18,20 @@ const bgTilt = [
 type Card = { kind: 'bad' | 'good'; src: string }
 
 const cards: Card[] = [
-  { kind: 'bad', src: posesAll[3].src },
+  { kind: 'bad', src: '/mobile-app/bad-photos/bad_1.jpg' },
   { kind: 'good', src: posesAll[10].src },
   { kind: 'good', src: posesAll[25].src },
-  { kind: 'bad', src: posesAll[18].src },
+  { kind: 'bad', src: '/mobile-app/bad-photos/bad_2.jpg' },
   { kind: 'good', src: posesAll[42].src },
+  { kind: 'bad', src: '/mobile-app/bad-photos/bad_3.jpg' },
   { kind: 'good', src: posesAll[55].src },
+  { kind: 'bad', src: '/mobile-app/bad-photos/bad_4.jpg' },
   { kind: 'good', src: posesAll[71].src },
-  { kind: 'bad', src: posesAll[33].src },
+  { kind: 'bad', src: '/mobile-app/bad-photos/bad_5.jpg' },
   { kind: 'good', src: posesAll[80].src },
+  { kind: 'bad', src: '/mobile-app/bad-photos/bad_6.jpg' },
   { kind: 'good', src: posesAll[88].src },
+  { kind: 'bad', src: '/mobile-app/bad-photos/bad_7.jpg' },
   { kind: 'good', src: posesAll[95].src },
 ]
 
