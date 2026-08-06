@@ -14,13 +14,14 @@ import {
 } from '@/lib/poses'
 
 const marketingCategories = [
-  '#tinderhero',
-  '#datenight',
-  '#careerpro',
-  '#travelvibes',
-  '#casual',
-  '#confident',
-  '#custom',
+  '#citystreet',
+  '#cafedrinks',
+  '#studio',
+  '#nightout',
+  '#goldenhour',
+  '#beach',
+  '#formal',
+  '#uploadyourpose',
 ]
 
 const galleryRowAv2 = posesAll.slice(0, 34)
@@ -140,8 +141,9 @@ export function Features() {
                 Pro <em className="gradient-text">collection</em>
               </h3>
               <p className="text-white/75 text-[12px] lg:text-[14px] leading-relaxed">
-                Tinder Hero, Date Night, Business, Casual, Outdoor — curated for every
-                situation that matters. Plus custom poses (upload your own).
+                City & Street, Café & Drinks, Studio, Night Out, Golden Hour, Beach,
+                Formal — curated for every situation. Plus custom poses{' '}
+                <em className="gradient-text not-italic">(upload your own)</em>.
               </p>
             </div>
           </AnimateOnScroll>
