@@ -103,7 +103,7 @@ export function Features() {
               </div>
               <div className="relative h-full flex flex-col justify-end p-5 lg:p-6">
                 <span className="pill-gradient pill-gradient-upper self-start mb-4">
-                  The output
+                  Pro poses
                 </span>
                 <h3 className="font-serif text-white text-[20px] lg:text-[24px] font-semibold tracking-tight mb-1.5 leading-tight">
                   Looks pro. <em className="gradient-text">Still you.</em>

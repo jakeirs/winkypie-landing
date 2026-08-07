@@ -12,13 +12,24 @@ const benefits = [
   },
   {
     title: 'Pro collection',
-    body: 'City & Street, Café & Drinks, Studio, Night Out, Golden Hour, Beach, Formal — plus upload your own pose.',
+    body: 'City & Street, Café & Drinks, Studio, Night Out, Golden Hour, Beach, Formal — curated for the situations that actually move the needle on dating apps.',
     icon: (
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="3" y="3" width="7" height="7" rx="1.5" />
         <rect x="14" y="3" width="7" height="7" rx="1.5" />
         <rect x="3" y="14" width="7" height="7" rx="1.5" />
         <rect x="14" y="14" width="7" height="7" rx="1.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Upload any pose',
+    body: 'Saw a shot on Instagram or Pinterest you love? Drop it in as a reference — AI matches the framing, lighting, and vibe with your face and build. No aesthetic is off-limits.',
+    icon: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+        <path d="M12 3v13" />
+        <path d="M7 8l5-5 5 5" />
       </svg>
     ),
   },
@@ -40,15 +51,6 @@ const benefits = [
       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 2L4 5v6c0 5.5 3.8 10.7 8 12 4.2-1.3 8-6.5 8-12V5l-8-3z" />
         <path d="M9 12l2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Apple-billed trial',
-    body: '3 days free, then $4.99/week. Apple notifies you before any charge. Cancel anytime in App Store.',
-    icon: (
-      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
       </svg>
     ),
   },
@@ -83,10 +85,48 @@ export function Benefits() {
               Built to get <em className="gradient-text">picked</em>.
             </h2>
             <p className="text-[13px] lg:text-[15px] text-white/75 max-w-xs lg:max-w-xl mx-auto leading-snug">
-              Pick from our pro collection, upload a custom reference you love, and let AI
-              handle the rest — engineered for the dating-app rules that actually move the
-              needle.
+              Pick from our pro collection — City & Street, Café & Drinks, Studio, Night Out,
+              Golden Hour, Beach, Formal — or upload a custom reference you love. AI handles
+              the rest, engineered for the dating-app rules that actually move the needle.
             </p>
+
+            <div className="flex flex-wrap justify-center gap-1.5 mt-5 lg:mt-6">
+              {[
+                {
+                  label: 'Free trial',
+                  icon: (
+                    <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M12 8v4l3 2" />
+                      <circle cx="12" cy="12" r="9" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: 'Cancel anytime',
+                  icon: (
+                    <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <path d="M5 12l5 5 9-11" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: 'Available on iOS',
+                  icon: (
+                    <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                    </svg>
+                  ),
+                },
+              ].map((pill) => (
+                <span
+                  key={pill.label}
+                  className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium text-white/85 border border-white/12 bg-white/[0.04] backdrop-blur-sm"
+                >
+                  <span className="text-[color:var(--brand-cta)]">{pill.icon}</span>
+                  {pill.label}
+                </span>
+              ))}
+            </div>
           </div>
         </AnimateOnScroll>
 

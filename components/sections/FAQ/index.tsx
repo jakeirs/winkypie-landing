@@ -20,17 +20,12 @@ export const faqs = [
   {
     question: 'What if I don\'t like a result?',
     answer:
-      'Pick a different pose or retake the selfie. With our pro collection spanning Selfie, Pose, Medium Shot, Sitting, and Business categories — or upload your own reference photo from anywhere — the right shot is usually a couple of tries away.',
+      'Pick a different pose or retake the selfie. With our pro collection — or upload your own reference from anywhere — the right shot is usually a couple of tries away. Before generating, we verify your selfie matches the pose and reject weak shots so you don\'t waste attempts.',
   },
   {
     question: 'How does the trial and cancellation work?',
     answer:
       'You get a free trial, then a paid subscription auto-renews through your Apple ID. Current pricing is shown in the app and on the App Store listing. Cancel anytime in App Store → your profile → Subscriptions. Apple notifies you before any charge.',
-  },
-  {
-    question: 'Is it only for iPhone?',
-    answer:
-      'Yes — WinkyPie is iOS only right now. Download from the App Store. An Android version is on the roadmap.',
   },
 ]
 
@@ -38,7 +33,7 @@ export function FAQ() {
   return (
     <section id="faq" className="px-4 py-10 lg:py-16">
       <FaqStructuredData faqs={[...faqs]} />
-      <div className="max-w-md lg:max-w-4xl mx-auto">
+      <div className="max-w-md lg:max-w-2xl mx-auto">
         <AnimateOnScroll>
           <div className="text-center mb-8 lg:mb-14">
             <div className="flex justify-center mb-4">
@@ -50,7 +45,7 @@ export function FAQ() {
           </div>
         </AnimateOnScroll>
 
-        <div className="space-y-2.5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-3">
+        <div className="space-y-2.5 lg:space-y-3">
           {faqs.map((faq, i) => (
             <AnimateOnScroll key={faq.question} animation="fade-up" delay={i * 60}>
               <details className="group rounded-2xl border border-white/12 bg-white/[0.03] open:bg-white/[0.05] open:border-white/20 transition-colors h-full">

@@ -5,20 +5,22 @@ import { useEffect, useState } from 'react'
 
 import AppStoreBadge from '@/components/ui/AppStoreBadge/AppStoreBadge'
 
-import { posesAll } from '@/lib/poses'
-
 const phonePairs = [
   {
-    selfie: posesAll[2].src,
-    generated: posesAll[38].src,
+    selfie: '/mobile-app/hero/hero_1_pre.PNG',
+    generated: '/mobile-app/hero/hero_1_after.PNG',
   },
   {
-    selfie: posesAll[8].src,
-    generated: posesAll[52].src,
+    selfie: '/mobile-app/hero/hero_2_pre.PNG',
+    generated: '/mobile-app/hero/hero_2_after.PNG',
   },
   {
-    selfie: posesAll[13].src,
-    generated: posesAll[73].src,
+    selfie: '/mobile-app/hero/hero_3_pre.PNG',
+    generated: '/mobile-app/hero/hero_3_after.PNG',
+  },
+  {
+    selfie: '/mobile-app/hero/hero_4_pre.PNG',
+    generated: '/mobile-app/hero/hero_4_after.PNG',
   },
 ]
 
@@ -76,7 +78,7 @@ export function Hero() {
     <section className="relative px-4 pt-24 lg:pt-28 pb-8 lg:pb-14 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-[radial-gradient(circle,rgba(245,158,11,0.08),transparent_70%)] pointer-events-none" />
 
-      <div className="relative max-w-md lg:max-w-5xl mx-auto">
+      <div className="relative max-w-lg lg:max-w-6xl mx-auto">
         <div className="flex flex-col items-center lg:grid lg:grid-cols-2 lg:gap-10 lg:items-center">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-md lg:max-w-none lg:order-1 order-2">
             <span className="inline-flex pill-gradient pill-gradient-upper pill-gradient-button mb-5 lg:mb-6">
@@ -113,31 +115,38 @@ export function Hero() {
           </div>
 
           <div className="relative flex justify-center items-center mb-12 lg:mb-0 order-1 lg:order-2">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 -z-10 m-auto h-[80%] w-[80%] rounded-full hero-glow"
-              style={{
-                background:
-                  'radial-gradient(circle, rgba(245,158,11,0.25) 0%, rgba(236,72,153,0.18) 40%, transparent 75%)',
-              }}
-            />
-
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-center items-center gap-5 sm:gap-8 lg:gap-14">
               <PhoneMockup
                 pairs={phonePairs.map((p) => p.selfie)}
                 activeIndex={pairIndex}
                 alt="Selfie input example"
                 className="hero-phone-left z-10"
-                imageClassName="hero-phone-image"
                 priority
               />
               <PhoneMockup
                 pairs={phonePairs.map((p) => p.generated)}
                 activeIndex={pairIndex}
                 alt="AI-generated pro photo example"
-                className="hero-phone-right -ml-10 sm:-ml-12 lg:-ml-14"
-                imageClassName="hero-phone-image hero-phone-image-delay"
+                className="hero-phone-right"
               />
+
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-[color:var(--brand-cta)] drop-shadow-[0_2px_8px_rgba(245,158,11,0.55)]"
+              >
+                <svg
+                  viewBox="0 0 100 70"
+                  className="w-12 sm:w-16 lg:w-20 h-auto -rotate-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2.4}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M6 18 C 18 44, 34 54, 46 42 C 58 30, 40 18, 38 30 C 37 44, 62 48, 86 40" />
+                  <path d="M78 32 L 88 40 L 79 48" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -164,7 +173,7 @@ function PhoneMockup({
   return (
     <div className={className}>
       <div className="phone-mockup">
-        <div className="phone-screen w-[150px] h-[315px] sm:w-[170px] sm:h-[358px] lg:w-[200px] lg:h-[420px] relative overflow-hidden">
+        <div className="phone-screen w-[144px] sm:w-[164px] lg:w-[196px] aspect-[1206/2622] relative overflow-hidden">
           {pairs.map((src, i) => (
             <Image
               key={src}

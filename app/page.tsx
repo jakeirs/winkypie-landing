@@ -17,9 +17,9 @@ export default function Home() {
       <main id="main">
         <Hero />
         <StatsStrip />
-        <SwipeStack />
-        <Features />
         <HowItWorks />
+        <Features />
+        <SwipeStack />
         <Benefits />
         <FAQ />
         <PaywallMirror />
