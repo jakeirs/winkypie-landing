@@ -232,7 +232,7 @@ export default function TermsPage() {
               </tr>
               <tr>
                 <td><strong>Half-Year</strong></td>
-                <td>50 Winky Shots per month</td>
+                <td>300 Winky Shots per period</td>
                 <td>Every 6 months</td>
                 <td>Semi-annually</td>
               </tr>
@@ -347,7 +347,7 @@ export default function TermsPage() {
               </tr>
               <tr>
                 <td>Half-Year</td>
-                <td>50 Winky Shots per month</td>
+                <td>300 Winky Shots every 6 months</td>
               </tr>
             </tbody>
           </table>

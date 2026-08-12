@@ -25,7 +25,7 @@ export const faqs = [
   {
     question: 'How does the trial and cancellation work?',
     answer:
-      'You get a free trial, then a paid subscription auto-renews through your Apple ID. Current pricing is shown in the app and on the App Store listing. Cancel anytime in App Store → your profile → Subscriptions. Apple notifies you before any charge.',
+      'The free trial includes 3 Winky Shots to try the app — each photo generation uses one Winky Shot. After that a paid subscription auto-renews through your Apple ID, and each plan includes a set number of Winky Shots per billing period. Current pricing is shown in the app and on the App Store listing. Cancel anytime in App Store → your profile → Subscriptions. Apple notifies you before any charge.',
   },
 ]
 
