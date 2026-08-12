@@ -2,25 +2,27 @@ import Header from '@/components/layout/Header/Header'
 import Footer from '@/components/layout/Footer/Footer'
 
 import { Hero } from '@/components/sections/Hero'
+import { StatsStrip } from '@/components/sections/StatsStrip'
+import { SwipeStack } from '@/components/sections/SwipeStack'
 import { Features } from '@/components/sections/Features'
 import { HowItWorks } from '@/components/sections/HowItWorks'
 import { Benefits } from '@/components/sections/Benefits'
-import { Testimonials } from '@/components/sections/Testimonials'
 import { FAQ } from '@/components/sections/FAQ'
-import { CTA } from '@/components/sections/CTA'
+import { PaywallMirror } from '@/components/sections/PaywallMirror'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <Hero />
-        <Features />
+        <StatsStrip />
         <HowItWorks />
+        <Features />
+        <SwipeStack />
         <Benefits />
-        <Testimonials />
         <FAQ />
-        <CTA />
+        <PaywallMirror />
       </main>
       <Footer />
     </>

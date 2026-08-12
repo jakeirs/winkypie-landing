@@ -16,7 +16,7 @@ export default function PrivacyPage() {
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-3xl mx-auto legal-content">
           <h1 className="text-3xl md:text-4xl font-bold mb-2 text-foreground">Privacy Policy for WinkyPie</h1>
-          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: March 15, 2026</p>
+          <p className="text-sm text-muted mb-8 pb-6 border-b border-border">Last updated: June 17, 2026</p>
 
           <p>This Privacy Policy for WinkyPie by Minimax Development (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) explains how we collect, store, use, and share information (&quot;process&quot;) when you engage with our services (&quot;Services&quot;) in relation to the WinkyPie mobile application (&quot;Application&quot;). This includes instances when you:</p>
 
@@ -49,7 +49,7 @@ export default function PrivacyPage() {
             <li><strong>Third-Party AI Disclosure:</strong> Your selfie images are processed by FAL.ai through secure API infrastructure for AI image generation. Pose reference images (which do not contain your selfie or face data) are analyzed by Google Gemini (accessed via OpenRouter) to generate pose descriptions. By using our AI features, you consent to this data sharing. Generated images are immediately downloaded to your device&apos;s local storage.</li>
             <li><strong>How do we keep your personal data secure?</strong> Our security is built on a &quot;privacy-by-design&quot; principle. We implement technical measures like encryption in transit and minimize data retention. Your selfie is temporarily processed by our secure AI service and automatically deleted from servers within 7 days.</li>
             <li><strong>What are your rights?</strong> Depending on your region, you have rights concerning your personal data, including the right to access, correct, delete your information, and delete your account.</li>
-            <li><strong>How can you exercise your rights?</strong> You can exercise your rights by contacting us directly at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> or by using the account deletion feature within the Application (Settings &gt; Delete Account). We will address your request in compliance with applicable data protection laws.</li>
+            <li><strong>How can you exercise your rights?</strong> You can exercise your rights by contacting us directly at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a> or by using the account deletion feature within the Application (Settings &gt; <span className="gradient-text font-semibold">Delete Account</span>). We will address your request in compliance with applicable data protection laws.</li>
           </ul>
 
           <hr />
@@ -354,7 +354,7 @@ export default function PrivacyPage() {
 
           <h2 id="section-9">9. Account Deletion</h2>
 
-          <p>You can delete your account and all associated data directly within the Application through <strong>Settings &gt; Delete Account</strong>.</p>
+          <p>You can delete your account and all associated data directly within the Application through <strong>Settings &gt; <span className="gradient-text font-semibold">Delete Account</span></strong>.</p>
 
           <p>Upon a deletion request, we will immediately:</p>
           <ul>
@@ -399,7 +399,7 @@ export default function PrivacyPage() {
 
           <h3>Right to Erasure Limitations</h3>
 
-          <p>When you delete your account through Settings &gt; Delete Account, we immediately delete all your locally stored images, preferences, and backend data. Due to the nature of our service, we cannot erase images that you may have exported or shared outside the Application before deletion.</p>
+          <p>When you delete your account through Settings &gt; <span className="gradient-text font-semibold">Delete Account</span>, we immediately delete all your locally stored images, preferences, and backend data. Due to the nature of our service, we cannot erase images that you may have exported or shared outside the Application before deletion.</p>
 
           <p>To exercise these rights, contact us at <a href="mailto:winkypie.app@gmail.com">winkypie.app@gmail.com</a>. We can assist you by submitting a data deletion request to our subscription management service on your behalf using your anonymous App User ID. You also have the right to lodge a complaint with a data protection authority.</p>
 
@@ -589,7 +589,7 @@ export default function PrivacyPage() {
 
           <p>The &quot;Last updated&quot; date at the top of this Privacy Policy indicates when the most recent revisions were made.</p>
 
-          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of March 15, 2026.</p>
+          <p className="mt-10 pt-6 border-t border-border italic text-muted">This Privacy Policy is effective as of June 17, 2026.</p>
 
           <div className="text-center pt-6 border-t border-border mt-12">
             <Link href="/" className="text-primary hover:underline">
