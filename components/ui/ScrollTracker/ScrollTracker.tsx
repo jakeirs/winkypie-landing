@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-import { trackScrollDepth } from '@/lib/gtag'
+import { trackScrollDepth } from '@/lib/analytics'
 
 const THRESHOLDS = [25, 50, 75, 100] as const
 

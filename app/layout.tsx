@@ -29,7 +29,7 @@ const fraunces = Fraunces({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://winkypie.app'),
-  title: 'WinkyPie — Pro photos. No photographer.',
+  title: 'WinkyPie — Pro authentic photos. No photographer.',
   description:
     'WinkyPie turns one selfie into pro photos for dating profiles. Built on Hinge + Princeton data. Your face & body, real photo not a filter. Free trial.',
   keywords: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     canonical: 'https://winkypie.app/',
   },
   openGraph: {
-    title: 'Pro photos. No photographer.',
+    title: 'Pro authentic photos. No photographer.',
     description:
       'One selfie. AI generates pro shots that match what dating apps actually reward. Your real face & body. Free trial.',
     type: 'website',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pro photos. No photographer.',
+    title: 'Pro authentic photos. No photographer.',
     description:
       'One selfie. AI photos that match what dating apps actually reward. Free trial.',
   },
