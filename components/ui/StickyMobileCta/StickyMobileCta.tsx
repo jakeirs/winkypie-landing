@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-import { trackDownloadClick } from '@/lib/gtag'
+import { trackDownloadClick } from '@/lib/analytics'
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/winkypie/id6757441777'
 
