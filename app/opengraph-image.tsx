@@ -49,7 +49,7 @@ export default async function OgImage() {
 
         <div
           style={{
-            display: 'inline-flex',
+            display: 'flex',
             alignItems: 'center',
             gap: 10,
             padding: '8px 18px',
