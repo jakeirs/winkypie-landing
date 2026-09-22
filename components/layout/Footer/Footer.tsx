@@ -40,7 +40,7 @@ export default function Footer() {
             </Link>
             <p className="text-white/65 text-[13px] lg:text-[14px] leading-relaxed max-w-sm">
               <span className="font-serif text-white text-[17px] lg:text-[19px] font-semibold">
-                Pro photos. <em className="gradient-text">No photographer.</em>
+                Pro authentic photos. <em className="gradient-text">No photographer.</em>
               </span>
               <br />
               One selfie. Pro poses from our collection or your own reference. AI does the rest.

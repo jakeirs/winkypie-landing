@@ -4,7 +4,7 @@ const mobileApplication = {
   '@context': 'https://schema.org',
   '@type': 'MobileApplication',
   name: 'WinkyPie',
-  alternateName: 'WinkyPie — Pro photos. No photographer.',
+  alternateName: 'WinkyPie — Pro authentic photos. No photographer.',
   operatingSystem: 'iOS',
   applicationCategory: 'PhotoApplication',
   description:

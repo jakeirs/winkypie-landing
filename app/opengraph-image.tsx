@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'WinkyPie — Pro photos. No photographer.'
+export const alt = 'WinkyPie — Pro authentic photos. No photographer.'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -78,7 +78,7 @@ export default async function OgImage() {
             letterSpacing: -2,
           }}
         >
-          <span>Pro photos.</span>
+          <span>Pro authentic photos.</span>
           <span
             style={{
               background:
